@@ -36,16 +36,30 @@ namespace Exame.Dominio.Entities
             ValidarEntidade();
         }
 
+        public void Alterar(byte mes, ushort ano, int numeroLacamento, Cosif cosif, string descricao, string usuario, int valor)
+        {
+            Mes = mes;
+            Ano = ano;
+            NumeroLancamento = numeroLacamento;
+            Cosif = cosif;
+            Descricao = descricao;
+            DataMovimento = new DateTime();
+            Usuario = usuario;
+            Valor = valor;
+
+            ValidarEntidade();
+        }
+
         private void ValidarEntidade()
         {
             new AddNotifications<Movimento>(this).
-                IfNull(x => x.Mes, Message.X0_E_OBRIGATORIA.ToFormat("Mês")).
-                IfNull(x => x.Ano, Message.X0_E_OBRIGATORIA.ToFormat("Ano")).
+                IfTrue(x => x.Mes < 1, Message.A_X0_DEVE_SER_MAIOR_OU_IGUAL_A_X1.ToFormat("Mês", 1)).
+                IfTrue(x => x.Ano < 1, Message.A_X0_DEVE_SER_MAIOR_OU_IGUAL_A_X1.ToFormat("Ano", 1)).
                 IfNull(x => x.NumeroLancamento, Message.X0_E_OBRIGATORIA.ToFormat("Numero do Lançamento")).
                 IfNull(x => x.Cosif, Message.OBJETO_X0_E_OBRIGATORIO.ToFormat("Cosif")).
                 IfNullOrInvalidLength(x => x.Descricao, 3, 50, Message.X0_E_OBRIGATORIA.ToFormat("Descrição")).
                 IfNullOrEmpty(x => x.Usuario, Message.X0_E_OBRIGATORIA.ToFormat("Usuario")).
-                IfNull(x => x.Valor);
+                IfTrue(x => x.Valor < 0, Message.A_X0_DEVE_SER_MAIOR_OU_IGUAL_A_X1.ToFormat("Valor", 0));
         }
     }
 }

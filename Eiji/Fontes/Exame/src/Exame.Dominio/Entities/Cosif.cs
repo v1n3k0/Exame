@@ -25,6 +25,14 @@ namespace Exame.Dominio.Entities
             ValidarEntidade();
         }
 
+        public void Alterar(Produto produto, EnumStatus status)
+        {
+            Produto = produto;
+            Status = status;
+
+            ValidarEntidade();
+        }
+
         private void ValidarEntidade()
         {
             new AddNotifications<Cosif>(this).

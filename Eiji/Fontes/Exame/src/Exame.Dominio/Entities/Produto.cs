@@ -25,6 +25,14 @@ namespace Exame.Dominio.Entities
             ValidarEntidade();
         }
 
+        public void Alterar(string descricao, EnumStatus status)
+        {
+            Descricao = descricao;
+            Status = status;
+
+            ValidarEntidade();
+        }
+
         private void ValidarEntidade()
         {
             new AddNotifications<Produto>(this).
