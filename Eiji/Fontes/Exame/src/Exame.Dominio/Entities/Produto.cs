@@ -9,8 +9,8 @@ namespace Exame.Dominio.Entities
     public class Produto : EntityBase
     {
 
-        public string Descricao { get; set; }
-        public EnumStatus Status { get; set; }
+        public string Descricao { get; private set; }
+        public EnumStatus Status { get; private set; }
 
         protected Produto()
         {

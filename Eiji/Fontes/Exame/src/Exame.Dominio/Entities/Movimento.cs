@@ -8,14 +8,14 @@ namespace Exame.Dominio.Entities
 {
     public class Movimento : EntityBase
     {
-        public byte Mes { get; set; }
-        public ushort Ano { get; set; }
-        public int NumeroLancamento { get; set; }
-        public Cosif Cosif { get; set; }
-        public string Descricao { get; set; }
-        public DateTime DataMovimento { get; set; }
-        public string Usuario { get; set; }
-        public int Valor { get; set; }
+        public byte Mes { get; private set; }
+        public ushort Ano { get; private set; }
+        public int NumeroLancamento { get; private set; }
+        public Cosif Cosif { get; private set; }
+        public string Descricao { get; private set; }
+        public DateTime DataMovimento { get; private set; }
+        public string Usuario { get; private set; }
+        public int Valor { get; private set; }
 
         protected Movimento()
         {
