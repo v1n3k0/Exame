@@ -1,0 +1,83 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Exame\\Eiji\\Fontes\\Exame\\test\\Exame.DominioTeste\\Exame.DominioTeste.csproj": {}
+  },
+  "projects": {
+    "C:\\Exame\\Eiji\\Fontes\\Exame\\test\\Exame.DominioTeste\\Exame.DominioTeste.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Exame\\Eiji\\Fontes\\Exame\\test\\Exame.DominioTeste\\Exame.DominioTeste.csproj",
+        "projectName": "Exame.DominioTeste",
+        "projectPath": "C:\\Exame\\Eiji\\Fontes\\Exame\\test\\Exame.DominioTeste\\Exame.DominioTeste.csproj",
+        "packagesPath": "C:\\Users\\vinicius.horiguchi\\.nuget\\packages\\",
+        "outputPath": "C:\\Exame\\Eiji\\Fontes\\Exame\\test\\Exame.DominioTeste\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\vinicius.horiguchi\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp2.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp2.1": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp2.1": {
+          "dependencies": {
+            "Bogus": {
+              "target": "Package",
+              "version": "[27.0.1, )"
+            },
+            "ExpectedObjects": {
+              "target": "Package",
+              "version": "[2.3.4, )"
+            },
+            "Microsoft.NET.Test.Sdk": {
+              "target": "Package",
+              "version": "[15.9.0, )"
+            },
+            "Microsoft.NETCore.App": {
+              "target": "Package",
+              "version": "[2.1.0, )",
+              "autoReferenced": true
+            },
+            "Moq": {
+              "target": "Package",
+              "version": "[4.11.0, )"
+            },
+            "xunit": {
+              "target": "Package",
+              "version": "[2.4.0, )"
+            },
+            "xunit.runner.visualstudio": {
+              "target": "Package",
+              "version": "[2.4.0, )"
+            }
+          },
+          "imports": [
+            "net461"
+          ],
+          "assetTargetFallback": true,
+          "warn": true
+        }
+      }
+    }
+  }
+}
