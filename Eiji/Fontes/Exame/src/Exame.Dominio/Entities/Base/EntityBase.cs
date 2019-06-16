@@ -5,11 +5,11 @@ namespace Exame.Dominio.Entities.Base
 {
     public abstract class EntityBase : Notifiable
     {
+        public Guid Codigo { get; private set; }
+
         protected EntityBase()
         {
-            codigo = Guid.NewGuid();
+            Codigo = Guid.NewGuid();
         }
-
-        public Guid codigo { get; private set; }
     }
 }

@@ -8,9 +8,9 @@ namespace Exame.Dominio.Interfaces.Services
 {
     public interface IServiceProduto : IServiceBase
     {
-        ResponseBase Adicionar(AdicionarProdutoRequest request);
+        ProdutoResponse Adicionar(AdicionarProdutoRequest request);
 
-        AlterarProdutoResponse Alterar(AlterarProdutoRequest request);
+        ProdutoResponse Alterar(AlterarProdutoRequest request);
 
         ProdutoResponse Obter(Guid codigo);
 

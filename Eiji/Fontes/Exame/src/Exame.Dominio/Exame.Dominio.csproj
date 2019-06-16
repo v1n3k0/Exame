@@ -78,15 +78,12 @@
     <Compile Include="Arguments\Base\ResponseBase.cs" />
     <Compile Include="Arguments\Cosif\AdicionarCosifRequest.cs" />
     <Compile Include="Arguments\Cosif\AlterarCosifRequest.cs" />
-    <Compile Include="Arguments\Cosif\AlterarCosifResponse.cs" />
     <Compile Include="Arguments\Cosif\CosifResponse.cs" />
     <Compile Include="Arguments\Movimento\AdicionarMovimentoRequest.cs" />
     <Compile Include="Arguments\Movimento\AlterarMovimentoRequest.cs" />
-    <Compile Include="Arguments\Movimento\AlterarMovimentoResponse.cs" />
     <Compile Include="Arguments\Movimento\MovimentoResponse.cs" />
     <Compile Include="Arguments\Produto\AdicionarProdutoRequest.cs" />
     <Compile Include="Arguments\Produto\AlterarProdutoRequest.cs" />
-    <Compile Include="Arguments\Produto\AlterarProdutoResponse.cs" />
     <Compile Include="Arguments\Produto\ProdutoResponse.cs" />
     <Compile Include="Entities\Base\EntityBase.cs" />
     <Compile Include="Entities\Cosif.cs" />
@@ -96,6 +93,10 @@
     <Compile Include="Enum\EnumStatus.cs" />
     <Compile Include="Interfaces\Arguments\IRequest.cs" />
     <Compile Include="Interfaces\Arguments\IResponse.cs" />
+    <Compile Include="Interfaces\Repositories\Base\IRepositoryBase.cs" />
+    <Compile Include="Interfaces\Repositories\IRepositoryCosif.cs" />
+    <Compile Include="Interfaces\Repositories\IRepositoryMovimento.cs" />
+    <Compile Include="Interfaces\Repositories\IRepositoryProduto.cs" />
     <Compile Include="Interfaces\Services\Base\IServiceBase.cs" />
     <Compile Include="Interfaces\Services\IServiceCosif.cs" />
     <Compile Include="Interfaces\Services\IServiceMovimento.cs" />
@@ -106,6 +107,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Message.resx</DependentUpon>
     </Compile>
+    <Compile Include="Services\ServiceCosif.cs" />
+    <Compile Include="Services\ServiceMovimento.cs" />
+    <Compile Include="Services\ServiceProduto.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Diagrams\Exame.cd" />
@@ -117,10 +121,7 @@
       <LastGenOutput>Message.Designer.cs</LastGenOutput>
     </EmbeddedResource>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Interfaces\Repositories\" />
-    <Folder Include="Services\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\..\packages\NETStandard.Library.2.0.3\build\netstandard2.0\NETStandard.Library.targets" Condition="Exists('..\..\packages\NETStandard.Library.2.0.3\build\netstandard2.0\NETStandard.Library.targets')" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

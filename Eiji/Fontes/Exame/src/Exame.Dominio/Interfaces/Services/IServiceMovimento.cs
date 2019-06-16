@@ -8,9 +8,9 @@ namespace Exame.Dominio.Interfaces.Services
 {
     public interface IServiceMovimento: IServiceBase
     {
-        ResponseBase Adicionar(AdicionarMovimentoRequest request);
+        MovimentoResponse Adicionar(AdicionarMovimentoRequest request);
 
-        AlterarMovimentoResponse Alterar(AlterarMovimentoRequest request);
+        MovimentoResponse Alterar(AlterarMovimentoRequest request);
 
         MovimentoResponse Obter(Guid codigo);
 

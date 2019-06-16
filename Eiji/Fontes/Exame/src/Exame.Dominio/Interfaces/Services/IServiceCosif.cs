@@ -8,9 +8,9 @@ namespace Exame.Dominio.Interfaces.Services
 {
     public interface IServiceCosif: IServiceBase
     {
-        ResponseBase Adicionar(AdicionarCosifRequest request);
+        CosifResponse Adicionar(AdicionarCosifRequest request);
 
-        AlterarCosifResponse Alterar(AlterarCosifRequest request);
+        CosifResponse Alterar(AlterarCosifRequest request);
 
         CosifResponse Obter(Guid codigo);
 
