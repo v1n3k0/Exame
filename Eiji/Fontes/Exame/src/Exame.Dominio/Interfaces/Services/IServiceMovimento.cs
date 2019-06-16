@@ -10,7 +10,7 @@ namespace Exame.Dominio.Interfaces.Services
     {
         MovimentoResponse Adicionar(AdicionarMovimentoRequest request);
 
-        MovimentoResponse Alterar(AlterarMovimentoRequest request);
+        MovimentoResponse Editar(EditarMovimentoRequest request);
 
         MovimentoResponse Obter(Guid codigo);
 

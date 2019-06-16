@@ -3,12 +3,13 @@ using System;
 
 namespace Exame.Dominio.Arguments.Movimento
 {
-    public class AlterarMovimentoRequest : RequestBase
+    public class EditarMovimentoRequest : RequestBase
     {
+        public Guid Codigo { get; set; }
         public byte Mes { get; set; }
         public ushort Ano { get; set; }
         public int NumeroLancamento { get; set; }
-        public Guid CodCosif { get; set; }
+        public Guid CodigoCosif { get; set; }
         public string Descricao { get; set; }
         public string Usuario { get; set; }
         public int Valor { get; set; }

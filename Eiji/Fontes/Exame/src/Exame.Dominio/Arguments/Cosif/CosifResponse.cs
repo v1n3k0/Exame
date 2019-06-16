@@ -7,6 +7,7 @@ namespace Exame.Dominio.Arguments.Cosif
 {
     public class CosifResponse : ResponseBase
     {
+        public Guid Codigo { get; set; }
         public ProdutoResponse Produto { get; set; }
         public string Classificacao { get; set; }
         public string Status { get; set; }
@@ -15,6 +16,7 @@ namespace Exame.Dominio.Arguments.Cosif
         {
             return new CosifResponse()
             {
+                Codigo = entidade.Codigo,
                 Produto = (ProdutoResponse)entidade.Produto,
                 Classificacao = entidade.Classificacao.ToString(),
                 Status = entidade.Status.ToString()
