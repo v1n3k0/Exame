@@ -39,8 +39,8 @@ namespace Exame.Dominio.Entities
         {
             new AddNotifications<Cosif>(this).
                 IfNull(x => x.Produto, Message.OBJETO_X0_E_OBRIGATORIO.ToFormat("Produto")).
-                IfNull(x => x.Classificacao, Message.X0_E_OBRIGATORIA.ToFormat("Classificação")).
-                IfNull(x => x.Status, Message.X0_E_OBRIGATORIA.ToFormat("Status"));
+                IfEnumInvalid(x => x.Classificacao, Message.X0_E_OBRIGATORIA.ToFormat("Classificação")).
+                IfEnumInvalid(x => x.Status, Message.X0_E_OBRIGATORIA.ToFormat("Status"));
         }
     }
 }

@@ -11,10 +11,10 @@ C:\Exame\Eiji\Fontes\Exame\src\Exame.Dominio\bin\Debug\System.Security.Cryptogra
 C:\Exame\Eiji\Fontes\Exame\src\Exame.Dominio\bin\Debug\System.Security.Cryptography.X509Certificates.dll
 C:\Exame\Eiji\Fontes\Exame\src\Exame.Dominio\bin\Debug\System.Xml.ReaderWriter.dll
 C:\Exame\Eiji\Fontes\Exame\src\Exame.Dominio\bin\Debug\en-US\prmToolkit.NotificationPattern.resources.dll
-C:\Exame\Eiji\Fontes\Exame\src\Exame.Dominio\obj\Debug\Exame.Dominio.csprojAssemblyReference.cache
 C:\Exame\Eiji\Fontes\Exame\src\Exame.Dominio\obj\Debug\Exame.Dominio.Resources.Message.resources
 C:\Exame\Eiji\Fontes\Exame\src\Exame.Dominio\obj\Debug\Exame.Dominio.csproj.GenerateResource.cache
 C:\Exame\Eiji\Fontes\Exame\src\Exame.Dominio\obj\Debug\Exame.Dominio.csproj.CoreCompileInputs.cache
 C:\Exame\Eiji\Fontes\Exame\src\Exame.Dominio\obj\Debug\Exame.Dominio.csproj.CopyComplete
 C:\Exame\Eiji\Fontes\Exame\src\Exame.Dominio\obj\Debug\Exame.Dominio.dll
 C:\Exame\Eiji\Fontes\Exame\src\Exame.Dominio\obj\Debug\Exame.Dominio.pdb
+C:\Exame\Eiji\Fontes\Exame\src\Exame.Dominio\obj\Debug\Exame.Dominio.csprojAssemblyReference.cache

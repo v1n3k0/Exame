@@ -37,7 +37,7 @@ namespace Exame.Dominio.Entities
         {
             new AddNotifications<Produto>(this).
                 IfNullOrInvalidLength(x => x.Descricao, 3, 30, Message.X0_E_OBRIGATORIA_E_DEVE_CONTER_X1_CARACTERES.ToFormat("Descrição", 1, 30)).
-                IfNull(x => x.Status, Message.X0_E_OBRIGATORIA.ToFormat("Status"));
+                IfEnumInvalid(x => x.Status, Message.X0_E_OBRIGATORIA.ToFormat("Status"));
         }
     }
 }
