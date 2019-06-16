@@ -10,11 +10,11 @@ namespace Exame.Dominio.Interfaces.Services
     {
         CosifResponse Adicionar(AdicionarCosifRequest request);
 
-        CosifResponse Alterar(AlterarCosifRequest request);
+        CosifResponse Editar(EditarCosifRequest request);
 
         CosifResponse Obter(Guid codigo);
 
-        ResponseBase Remover(Guid request);
+        ResponseBase Remover(Guid codigo);
 
         IEnumerable<CosifResponse> Listar();
     }

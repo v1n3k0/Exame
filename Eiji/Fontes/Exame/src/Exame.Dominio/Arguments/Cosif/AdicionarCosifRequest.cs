@@ -5,7 +5,7 @@ namespace Exame.Dominio.Arguments.Cosif
 {
     public class AdicionarCosifRequest: RequestBase
     {
-        public Guid CodProduto { get; set; }
+        public Guid CodigoProduto { get; set; }
         public string Classificacao { get; set; }
     }
 }

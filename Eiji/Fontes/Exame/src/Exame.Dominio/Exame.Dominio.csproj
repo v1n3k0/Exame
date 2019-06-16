@@ -77,13 +77,13 @@
     <Compile Include="Arguments\Base\RequestBase.cs" />
     <Compile Include="Arguments\Base\ResponseBase.cs" />
     <Compile Include="Arguments\Cosif\AdicionarCosifRequest.cs" />
-    <Compile Include="Arguments\Cosif\AlterarCosifRequest.cs" />
+    <Compile Include="Arguments\Cosif\EditarCosifRequest.cs" />
     <Compile Include="Arguments\Cosif\CosifResponse.cs" />
     <Compile Include="Arguments\Movimento\AdicionarMovimentoRequest.cs" />
     <Compile Include="Arguments\Movimento\AlterarMovimentoRequest.cs" />
     <Compile Include="Arguments\Movimento\MovimentoResponse.cs" />
     <Compile Include="Arguments\Produto\AdicionarProdutoRequest.cs" />
-    <Compile Include="Arguments\Produto\AlterarProdutoRequest.cs" />
+    <Compile Include="Arguments\Produto\EditarProdutoRequest.cs" />
     <Compile Include="Arguments\Produto\ProdutoResponse.cs" />
     <Compile Include="Entities\Base\EntityBase.cs" />
     <Compile Include="Entities\Cosif.cs" />

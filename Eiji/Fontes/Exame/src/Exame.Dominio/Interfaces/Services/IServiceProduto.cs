@@ -10,7 +10,7 @@ namespace Exame.Dominio.Interfaces.Services
     {
         ProdutoResponse Adicionar(AdicionarProdutoRequest request);
 
-        ProdutoResponse Alterar(AlterarProdutoRequest request);
+        ProdutoResponse Editar(EditarProdutoRequest request);
 
         ProdutoResponse Obter(Guid codigo);
 

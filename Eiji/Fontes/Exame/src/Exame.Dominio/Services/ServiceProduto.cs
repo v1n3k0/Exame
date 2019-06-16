@@ -15,7 +15,7 @@ namespace Exame.Dominio.Services
 {
     public class ServiceProduto : Notifiable, IServiceProduto
     {
-        private IRepositoryProduto _repository { get; set; }
+        private readonly IRepositoryProduto _repositoryProduto;
 
         protected ServiceProduto()
         {
@@ -24,12 +24,12 @@ namespace Exame.Dominio.Services
 
         public ServiceProduto(IRepositoryProduto repositoryProduto)
         {
-            _repository = repositoryProduto;
+            _repositoryProduto = repositoryProduto;
         }
 
         public ProdutoResponse Adicionar(AdicionarProdutoRequest request)
         {
-            if(request == null)
+            if (request == null)
             {
                 AddNotification("Adicionar", Message.OBJETO_X0_E_OBRIGATORIO.ToFormat("AdicionarProdutoRequest"));
                 return null;
@@ -42,12 +42,12 @@ namespace Exame.Dominio.Services
             if (IsInvalid())
                 return null;
 
-            produto = _repository.Adicionar(produto);
+            produto = _repositoryProduto.Adicionar(produto);
 
             return (ProdutoResponse)produto;
         }
 
-        public ProdutoResponse Alterar(AlterarProdutoRequest request)
+        public ProdutoResponse Editar(EditarProdutoRequest request)
         {
             if (request == null)
             {
@@ -55,46 +55,44 @@ namespace Exame.Dominio.Services
                 return null;
             }
 
-            Produto produto =_repository.ObterPorId(request.Codigo);
+            Produto produto = _repositoryProduto.ObterPorId(request.Codigo);
 
-            if(produto == null)
+            if (produto == null)
             {
-                AddNotification("Id", Message.DADOS_NAO_ENCONTRADOS);
+                AddNotification("Codigo", Message.DADOS_NAO_ENCONTRADOS);
                 return null;
             }
 
-            try
+            if (!System.Enum.TryParse<EnumStatus>(request.Status, true, out var status))
             {
-                EnumStatus status = (EnumStatus)System.Enum.Parse(typeof(EnumStatus), request.Status);
-                produto.Alterar(request.Descricao, status);
+                AddNotification("Status", Message.DADOS_NAO_ENCONTRADOS);
+                return null;
             }
-            catch (ArgumentException e)
-            {
-                AddNotification("Status", string.Concat(Message.DADOS_NAO_ENCONTRADOS, e.Message));
-            }            
+
+            produto.Alterar(request.Descricao, status);
 
             AddNotifications(produto);
 
             if (IsInvalid())
                 return null;
 
-            produto = _repository.Editar(produto);
+            produto = _repositoryProduto.Editar(produto);
 
             return (ProdutoResponse)produto;
         }
 
         public IEnumerable<ProdutoResponse> Listar()
         {
-            return _repository.Listar().ToList().Select(x => (ProdutoResponse)x).ToList();
+            return _repositoryProduto.Listar().ToList().Select(x => (ProdutoResponse)x).ToList();
         }
 
         public ProdutoResponse Obter(Guid codigo)
         {
-            Produto produto = _repository.ObterPorId(codigo);
+            Produto produto = _repositoryProduto.ObterPorId(codigo);
 
             if (produto == null)
             {
-                AddNotification("Id", Message.DADOS_NAO_ENCONTRADOS);
+                AddNotification("Codigo", Message.DADOS_NAO_ENCONTRADOS);
                 return null;
             }
 
@@ -103,15 +101,15 @@ namespace Exame.Dominio.Services
 
         public ResponseBase Remover(Guid codigo)
         {
-            Produto produto = _repository.ObterPorId(codigo);
+            Produto produto = _repositoryProduto.ObterPorId(codigo);
 
-            if(produto == null)
+            if (produto == null)
             {
                 AddNotification("Id", Message.DADOS_NAO_ENCONTRADOS);
                 return null;
             }
 
-            _repository.Remover(produto);
+            _repositoryProduto.Remover(produto);
 
             return new ResponseBase();
         }

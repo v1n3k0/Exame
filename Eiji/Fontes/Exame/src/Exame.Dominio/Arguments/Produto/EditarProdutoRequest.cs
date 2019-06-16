@@ -3,7 +3,7 @@ using System;
 
 namespace Exame.Dominio.Arguments.Produto
 {
-    public class AlterarProdutoRequest: RequestBase
+    public class EditarProdutoRequest: RequestBase
     {
         public Guid Codigo { get; set; }
         public string Descricao { get; set; }
