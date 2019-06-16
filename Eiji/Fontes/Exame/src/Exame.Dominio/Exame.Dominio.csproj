@@ -110,6 +110,8 @@
     <Compile Include="Services\ServiceCosif.cs" />
     <Compile Include="Services\ServiceMovimento.cs" />
     <Compile Include="Services\ServiceProduto.cs" />
+    <Compile Include="ValueObjects\Email.cs" />
+    <Compile Include="ValueObjects\Nome.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Diagrams\Exame.cd" />

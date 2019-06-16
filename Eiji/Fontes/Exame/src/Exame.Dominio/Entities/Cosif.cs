@@ -10,7 +10,7 @@ namespace Exame.Dominio.Entities
     {
         public EnumClassificacaoConta Classificacao { get; private set; }
         public EnumStatus Status { get; private set; }
-        public virtual Produto Produto { get; private set; }
+        public Produto Produto { get; private set; }
 
         protected Cosif()
         {

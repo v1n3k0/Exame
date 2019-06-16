@@ -45,7 +45,7 @@ namespace Exame.Dominio.Services
             }
 
             var movimento = new Movimento(request.Mes, request.Ano, request.NumeroLancamento, cosif, request.Descricao,
-                request.Usuario, request.Valor);
+                request.Valor);
 
             AddNotifications(movimento);
 
@@ -82,7 +82,7 @@ namespace Exame.Dominio.Services
             }
 
             movimento.Alterar(request.Mes, request.Ano, request.NumeroLancamento, cosif, request.Descricao,
-                request.Usuario, request.Valor);
+                request.Valor);
 
             AddNotifications(movimento);
 

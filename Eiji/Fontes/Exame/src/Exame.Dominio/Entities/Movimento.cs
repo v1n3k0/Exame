@@ -15,14 +15,14 @@ namespace Exame.Dominio.Entities
         public DateTime DataMovimento { get; private set; }
         public string Usuario { get; private set; }
         public int Valor { get; private set; }
-        public virtual Cosif Cosif { get; private set; }
+        public Cosif Cosif { get; private set; }
 
         protected Movimento()
         {
 
         }
 
-        public Movimento(byte mes, short ano, int numeroLacamento, Cosif cosif, string descricao, string usuario, int valor)
+        public Movimento(byte mes, short ano, int numeroLacamento, Cosif cosif, string descricao, int valor)
         {
             Mes = mes;
             Ano = ano;
@@ -30,13 +30,13 @@ namespace Exame.Dominio.Entities
             Cosif = cosif;
             Descricao = descricao;
             DataMovimento = new DateTime();
-            Usuario = usuario;
+            Usuario = "TESTE";
             Valor = valor;
 
             ValidarEntidade();
         }
 
-        public void Alterar(byte mes, short ano, int numeroLacamento, Cosif cosif, string descricao, string usuario, int valor)
+        public void Alterar(byte mes, short ano, int numeroLacamento, Cosif cosif, string descricao, int valor)
         {
             Mes = mes;
             Ano = ano;
@@ -44,7 +44,7 @@ namespace Exame.Dominio.Entities
             Cosif = cosif;
             Descricao = descricao;
             DataMovimento = new DateTime();
-            Usuario = usuario;
+            Usuario = "TESTE";
             Valor = valor;
 
             ValidarEntidade();

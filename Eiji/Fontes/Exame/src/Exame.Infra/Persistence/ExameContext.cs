@@ -1,11 +1,6 @@
 ﻿using Exame.Dominio.Entities;
-using System;
-using System.Collections.Generic;
 using System.Data.Entity;
 using System.Data.Entity.ModelConfiguration.Conventions;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Exame.Infra.Persistence
 {
@@ -17,8 +12,8 @@ namespace Exame.Infra.Persistence
 
         public ExameContext() : base("ExameConnetionString")
         {
-            Configuration.ProxyCreationEnabled = false;
-            Configuration.LazyLoadingEnabled = false;
+            Configuration.ProxyCreationEnabled = true;
+            Configuration.LazyLoadingEnabled = true;
         }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
@@ -30,8 +25,8 @@ namespace Exame.Infra.Persistence
             modelBuilder.Conventions.Remove<PluralizingTableNameConvention>();
 
             //Remove exclusão em cascata
-            modelBuilder.Conventions.Remove<OneToManyCascadeDeleteConvention>();
-            modelBuilder.Conventions.Remove<ManyToManyCascadeDeleteConvention>();
+            //modelBuilder.Conventions.Remove<OneToManyCascadeDeleteConvention>();
+            //modelBuilder.Conventions.Remove<ManyToManyCascadeDeleteConvention>();
 
             //Setar para usar varchar ou invés de nvarchar
             modelBuilder.Properties<string>().Configure(p => p.HasColumnType("varchar"));
