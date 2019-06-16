@@ -113,11 +113,17 @@
     <Compile Include="Migrations\201906161618378_CriarBanco.Designer.cs">
       <DependentUpon>201906161618378_CriarBanco.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201906161644112_CriarBanco1.cs" />
+    <Compile Include="Migrations\201906161644112_CriarBanco1.Designer.cs">
+      <DependentUpon>201906161644112_CriarBanco1.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Persistence\ExameContext.cs" />
+    <Compile Include="Persistence\Map\Base\MapBase.cs" />
     <Compile Include="Persistence\Map\MapCosif.cs" />
     <Compile Include="Persistence\Map\MapMovimento.cs" />
     <Compile Include="Persistence\Map\MapProduto.cs" />
+    <Compile Include="Persistence\Repositories\Base\RepositoryBase.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -125,7 +131,6 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Persistence\Repositories\" />
     <Folder Include="Transactions\" />
   </ItemGroup>
   <ItemGroup>
@@ -137,6 +142,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201906161618378_CriarBanco.resx">
       <DependentUpon>201906161618378_CriarBanco.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201906161644112_CriarBanco1.resx">
+      <DependentUpon>201906161644112_CriarBanco1.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
