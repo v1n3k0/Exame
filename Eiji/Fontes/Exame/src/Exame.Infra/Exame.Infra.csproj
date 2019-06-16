@@ -124,15 +124,18 @@
     <Compile Include="Persistence\Map\MapMovimento.cs" />
     <Compile Include="Persistence\Map\MapProduto.cs" />
     <Compile Include="Persistence\Repositories\Base\RepositoryBase.cs" />
+    <Compile Include="Persistence\Repositories\RepositoryCosif.cs" />
+    <Compile Include="Persistence\Repositories\RepositoryMovimento.cs" />
+    <Compile Include="Persistence\Repositories\RepositoryProduto.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Transactions\IUnitOfWork.cs" />
+    <Compile Include="Transactions\UnitOfWork.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Transactions\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <ProjectReference Include="..\Exame.Dominio\Exame.Dominio.csproj">
       <Project>{73CF6645-A86A-4CA2-9597-8A0099FC7CAC}</Project>
