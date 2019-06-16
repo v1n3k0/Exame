@@ -9,20 +9,20 @@ namespace Exame.Dominio.Entities
     public class Movimento : EntityBase
     {
         public byte Mes { get; private set; }
-        public ushort Ano { get; private set; }
+        public short Ano { get; private set; }
         public int NumeroLancamento { get; private set; }
-        public Cosif Cosif { get; private set; }
         public string Descricao { get; private set; }
         public DateTime DataMovimento { get; private set; }
         public string Usuario { get; private set; }
         public int Valor { get; private set; }
+        public virtual Cosif Cosif { get; private set; }
 
         protected Movimento()
         {
 
         }
 
-        public Movimento(byte mes, ushort ano, int numeroLacamento, Cosif cosif, string descricao, string usuario, int valor)
+        public Movimento(byte mes, short ano, int numeroLacamento, Cosif cosif, string descricao, string usuario, int valor)
         {
             Mes = mes;
             Ano = ano;
@@ -36,7 +36,7 @@ namespace Exame.Dominio.Entities
             ValidarEntidade();
         }
 
-        public void Alterar(byte mes, ushort ano, int numeroLacamento, Cosif cosif, string descricao, string usuario, int valor)
+        public void Alterar(byte mes, short ano, int numeroLacamento, Cosif cosif, string descricao, string usuario, int valor)
         {
             Mes = mes;
             Ano = ano;

@@ -8,7 +8,7 @@ namespace Exame.Dominio.Arguments.Movimento
     {
         public Guid Codigo { get; set; }
         public byte Mes { get; set; }
-        public ushort Ano { get; set; }
+        public short Ano { get; set; }
         public int NumeroLancamento { get; set; }
         public CosifResponse Cosif { get; set; }
         public string Descricao { get; set; }

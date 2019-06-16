@@ -109,12 +109,35 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
+    <Compile Include="Migrations\201906161618378_CriarBanco.cs" />
+    <Compile Include="Migrations\201906161618378_CriarBanco.Designer.cs">
+      <DependentUpon>201906161618378_CriarBanco.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Persistence\ExameContext.cs" />
+    <Compile Include="Persistence\Map\MapCosif.cs" />
+    <Compile Include="Persistence\Map\MapMovimento.cs" />
+    <Compile Include="Persistence\Map\MapProduto.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Persistence\Repositories\" />
+    <Folder Include="Transactions\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Exame.Dominio\Exame.Dominio.csproj">
+      <Project>{73CF6645-A86A-4CA2-9597-8A0099FC7CAC}</Project>
+      <Name>Exame.Dominio</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201906161618378_CriarBanco.resx">
+      <DependentUpon>201906161618378_CriarBanco.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\..\packages\NETStandard.Library.2.0.3\build\netstandard2.0\NETStandard.Library.targets" Condition="Exists('..\..\packages\NETStandard.Library.2.0.3\build\netstandard2.0\NETStandard.Library.targets')" />
