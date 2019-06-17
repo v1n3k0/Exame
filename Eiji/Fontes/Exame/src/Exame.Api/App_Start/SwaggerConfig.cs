@@ -17,7 +17,7 @@ namespace Exame.Api
                 c.BasicAuth("basic").Description("Bearer Token Authentication");
                 c.OperationFilter<AddRequiredHeaderParameter>();
 
-                c.SingleApiVersion("v1", "XGame");
+                c.SingleApiVersion("v1", "Exame");
             })
             .EnableSwaggerUi(c =>
             {
