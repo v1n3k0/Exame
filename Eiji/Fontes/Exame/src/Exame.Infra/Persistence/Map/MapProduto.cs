@@ -1,6 +1,5 @@
 ﻿using Exame.Dominio.Entities;
 using Exame.Infra.Persistence.Map.Base;
-using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Exame.Infra.Persistence.Map
 {

@@ -17,8 +17,10 @@ namespace Exame.Infra.Persistence.Map
             Property(p => p.Descricao).HasMaxLength(50).IsRequired().HasColumnName("DES_DESCRICAO");
             Property(p => p.DataMovimento).IsRequired().HasColumnName("DAT_MOVIMENTO");
             Property(p => p.Usuario).HasMaxLength(15).IsRequired().HasColumnName("COD_USUARIO");
+            Property(p => p.CodigoCosif).HasColumnName("COD_COSIF");
 
-            HasRequired(m => m.Cosif).WithMany(c => c.Movimentos).Map(m => m.MapKey("COD_COSIF"));
+            //HasRequired(p => p.Cosif).WithMany().Map(m => m.MapKey("COD_COSIF"));
+            HasRequired(m => m.Cosif).WithMany(c => c.Movimentos).HasForeignKey(m => m.CodigoCosif);
         }
     }
 }

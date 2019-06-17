@@ -109,9 +109,17 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Migrations\201906170008308_CriarBanco.cs" />
-    <Compile Include="Migrations\201906170008308_CriarBanco.Designer.cs">
-      <DependentUpon>201906170008308_CriarBanco.cs</DependentUpon>
+    <Compile Include="Migrations\201906170130431_CriarBanco.cs" />
+    <Compile Include="Migrations\201906170130431_CriarBanco.Designer.cs">
+      <DependentUpon>201906170130431_CriarBanco.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201906170140326_CriarBanco1.cs" />
+    <Compile Include="Migrations\201906170140326_CriarBanco1.Designer.cs">
+      <DependentUpon>201906170140326_CriarBanco1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201906170150542_CriarBanco2.cs" />
+    <Compile Include="Migrations\201906170150542_CriarBanco2.Designer.cs">
+      <DependentUpon>201906170150542_CriarBanco2.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Persistence\ExameContext.cs" />
@@ -138,8 +146,14 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201906170008308_CriarBanco.resx">
-      <DependentUpon>201906170008308_CriarBanco.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201906170130431_CriarBanco.resx">
+      <DependentUpon>201906170130431_CriarBanco.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201906170140326_CriarBanco1.resx">
+      <DependentUpon>201906170140326_CriarBanco1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201906170150542_CriarBanco2.resx">
+      <DependentUpon>201906170150542_CriarBanco2.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

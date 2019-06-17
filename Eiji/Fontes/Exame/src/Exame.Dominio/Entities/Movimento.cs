@@ -15,6 +15,7 @@ namespace Exame.Dominio.Entities
         public DateTime DataMovimento { get; private set; }
         public string Usuario { get; private set; }
         public int Valor { get; private set; }
+        public Guid CodigoCosif { get; private set; }
         public virtual Cosif Cosif { get; private set; }
 
         protected Movimento()
@@ -29,7 +30,7 @@ namespace Exame.Dominio.Entities
             NumeroLancamento = numeroLacamento;
             Cosif = cosif;
             Descricao = descricao;
-            DataMovimento = new DateTime();
+            DataMovimento = DateTime.Now;
             Usuario = "TESTE";
             Valor = valor;
 
@@ -43,7 +44,7 @@ namespace Exame.Dominio.Entities
             NumeroLancamento = numeroLacamento;
             Cosif = cosif;
             Descricao = descricao;
-            DataMovimento = new DateTime();
+            DataMovimento = DateTime.Now;
             Usuario = "TESTE";
             Valor = valor;
 
@@ -53,13 +54,13 @@ namespace Exame.Dominio.Entities
         private void ValidarEntidade()
         {
             new AddNotifications<Movimento>(this).
-                IfTrue(x => x.Mes < 1, Message.A_X0_DEVE_SER_MAIOR_OU_IGUAL_A_X1.ToFormat("Mês", 1)).
-                IfTrue(x => x.Ano < 1, Message.A_X0_DEVE_SER_MAIOR_OU_IGUAL_A_X1.ToFormat("Ano", 1)).
-                IfNull(x => x.NumeroLancamento, Message.X0_E_OBRIGATORIA.ToFormat("Numero do Lançamento")).
+                //IfTrue(x => (int)x.Mes < 1, Message.A_X0_DEVE_SER_MAIOR_OU_IGUAL_A_X1.ToFormat("Mês", 1)).
+                //IfTrue(x => (int)x.Ano < 1, Message.A_X0_DEVE_SER_MAIOR_OU_IGUAL_A_X1.ToFormat("Ano", 1)).
+                //IfTrue(x => x.NumeroLancamento < 0, Message.A_X0_DEVE_SER_MAIOR_OU_IGUAL_A_X1.ToFormat("Numero do Lançamento", 1)).
+                //IfTrue(x => x.Valor < 0, Message.A_X0_DEVE_SER_MAIOR_OU_IGUAL_A_X1.ToFormat("valor", 0)).
                 IfNull(x => x.Cosif, Message.OBJETO_X0_E_OBRIGATORIO.ToFormat("Cosif")).
                 IfNullOrInvalidLength(x => x.Descricao, 3, 50, Message.X0_E_OBRIGATORIA.ToFormat("Descrição")).
-                IfNullOrEmpty(x => x.Usuario, Message.X0_E_OBRIGATORIA.ToFormat("Usuario")).
-                IfTrue(x => x.Valor < 0, Message.A_X0_DEVE_SER_MAIOR_OU_IGUAL_A_X1.ToFormat("Valor", 0));
+                IfNullOrEmpty(x => x.Usuario, Message.X0_E_OBRIGATORIA.ToFormat("Usuario"));
         }
     }
 }
