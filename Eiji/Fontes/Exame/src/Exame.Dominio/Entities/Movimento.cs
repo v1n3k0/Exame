@@ -15,7 +15,7 @@ namespace Exame.Dominio.Entities
         public DateTime DataMovimento { get; private set; }
         public string Usuario { get; private set; }
         public int Valor { get; private set; }
-        public Cosif Cosif { get; private set; }
+        public virtual Cosif Cosif { get; private set; }
 
         protected Movimento()
         {

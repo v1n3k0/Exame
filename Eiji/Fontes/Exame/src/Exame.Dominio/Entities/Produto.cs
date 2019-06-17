@@ -3,6 +3,7 @@ using Exame.Dominio.Enum;
 using Exame.Dominio.Resources;
 using prmToolkit.NotificationPattern;
 using prmToolkit.NotificationPattern.Extensions;
+using System.Collections.Generic;
 
 namespace Exame.Dominio.Entities
 {
@@ -11,6 +12,7 @@ namespace Exame.Dominio.Entities
 
         public string Descricao { get; private set; }
         public EnumStatus Status { get; private set; }
+        public virtual ICollection<Cosif> Cosifs { get; set; }
 
         protected Produto()
         {

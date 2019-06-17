@@ -13,7 +13,7 @@ namespace Exame.Infra.Migrations
         
         string IMigrationMetadata.Id
         {
-            get { return "201906162201079_CriarBanco"; }
+            get { return "201906170008308_CriarBanco"; }
         }
         
         string IMigrationMetadata.Source

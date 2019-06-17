@@ -33,3 +33,5 @@ C:\Exame\Eiji\Fontes\Exame\src\Exame.Infra\obj\Debug\Exame.Infra.csproj.CoreComp
 C:\Exame\Eiji\Fontes\Exame\src\Exame.Infra\obj\Debug\Exame.Infra.csproj.CopyComplete
 C:\Exame\Eiji\Fontes\Exame\src\Exame.Infra\obj\Debug\Exame.Infra.dll
 C:\Exame\Eiji\Fontes\Exame\src\Exame.Infra\obj\Debug\Exame.Infra.pdb
+C:\Exame\Eiji\Fontes\Exame\src\Exame.Infra\obj\Debug\Exame.Infra.Migrations.CriarBanco.resources
+C:\Exame\Eiji\Fontes\Exame\src\Exame.Infra\obj\Debug\Exame.Infra.csproj.GenerateResource.cache

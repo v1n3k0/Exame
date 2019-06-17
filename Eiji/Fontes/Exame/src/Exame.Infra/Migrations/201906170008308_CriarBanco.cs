@@ -21,16 +21,6 @@ namespace Exame.Infra.Migrations
                 .Index(t => t.COD_PRODUTO);
             
             CreateTable(
-                "dbo.PRODUTO",
-                c => new
-                    {
-                        COD_PRODUTO = c.Guid(nullable: false, identity: true),
-                        DES_PRODUTO = c.String(maxLength: 30, unicode: false),
-                        STA_STATUS = c.Int(nullable: false),
-                    })
-                .PrimaryKey(t => t.COD_PRODUTO);
-            
-            CreateTable(
                 "dbo.MOVIMENTO_MANUAL",
                 c => new
                     {
@@ -48,16 +38,26 @@ namespace Exame.Infra.Migrations
                 .ForeignKey("dbo.PRODUTO_COSIF", t => t.COD_COSIF, cascadeDelete: true)
                 .Index(t => t.COD_COSIF);
             
+            CreateTable(
+                "dbo.PRODUTO",
+                c => new
+                    {
+                        COD_PRODUTO = c.Guid(nullable: false, identity: true),
+                        DES_PRODUTO = c.String(maxLength: 30, unicode: false),
+                        STA_STATUS = c.Int(nullable: false),
+                    })
+                .PrimaryKey(t => t.COD_PRODUTO);
+            
         }
         
         public override void Down()
         {
-            DropForeignKey("dbo.MOVIMENTO_MANUAL", "COD_COSIF", "dbo.PRODUTO_COSIF");
             DropForeignKey("dbo.PRODUTO_COSIF", "COD_PRODUTO", "dbo.PRODUTO");
+            DropForeignKey("dbo.MOVIMENTO_MANUAL", "COD_COSIF", "dbo.PRODUTO_COSIF");
             DropIndex("dbo.MOVIMENTO_MANUAL", new[] { "COD_COSIF" });
             DropIndex("dbo.PRODUTO_COSIF", new[] { "COD_PRODUTO" });
-            DropTable("dbo.MOVIMENTO_MANUAL");
             DropTable("dbo.PRODUTO");
+            DropTable("dbo.MOVIMENTO_MANUAL");
             DropTable("dbo.PRODUTO_COSIF");
         }
     }

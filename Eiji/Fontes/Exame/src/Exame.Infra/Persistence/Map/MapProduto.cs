@@ -10,7 +10,7 @@ namespace Exame.Infra.Persistence.Map
         {
             ToTable("PRODUTO");
 
-            Property(x => x.Codigo).HasColumnName("COD_PRODUTO");
+            Property(p => p.Codigo).HasColumnName("COD_PRODUTO");
             Property(p => p.Descricao).HasMaxLength(30).HasColumnName("DES_PRODUTO");
             Property(p => p.Status).HasColumnName("STA_STATUS");
         }
