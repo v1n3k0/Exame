@@ -12,7 +12,7 @@ namespace Exame.Dominio.Entities
         public EnumClassificacaoConta Classificacao { get; private set; }
         public EnumStatus Status { get; private set; }
         public virtual Produto Produto { get; private set; }
-        public virtual ICollection<Movimento> Movimentos { get; set; }
+        public virtual IEnumerable<Movimento> Movimentos { get; set; }
 
         protected Cosif()
         {

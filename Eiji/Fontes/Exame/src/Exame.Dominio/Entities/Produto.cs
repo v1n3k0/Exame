@@ -12,7 +12,7 @@ namespace Exame.Dominio.Entities
 
         public string Descricao { get; private set; }
         public EnumStatus Status { get; private set; }
-        public virtual ICollection<Cosif> Cosifs { get; set; }
+        public virtual IEnumerable<Cosif> Cosifs { get; set; }
 
         protected Produto()
         {
