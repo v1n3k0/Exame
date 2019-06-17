@@ -10,7 +10,6 @@ namespace Exame.Dominio.Arguments.Movimento
         public int NumeroLancamento { get; set; }
         public Guid CodigoCosif { get; set; }
         public string Descricao { get; set; }
-        public string Usuario { get; set; }
         public int Valor { get; set; }
     }
 }

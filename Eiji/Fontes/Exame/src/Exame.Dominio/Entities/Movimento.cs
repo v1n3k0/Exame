@@ -54,13 +54,14 @@ namespace Exame.Dominio.Entities
         private void ValidarEntidade()
         {
             new AddNotifications<Movimento>(this).
-                //IfTrue(x => (int)x.Mes < 1, Message.A_X0_DEVE_SER_MAIOR_OU_IGUAL_A_X1.ToFormat("Mês", 1)).
-                //IfTrue(x => (int)x.Ano < 1, Message.A_X0_DEVE_SER_MAIOR_OU_IGUAL_A_X1.ToFormat("Ano", 1)).
-                //IfTrue(x => x.NumeroLancamento < 0, Message.A_X0_DEVE_SER_MAIOR_OU_IGUAL_A_X1.ToFormat("Numero do Lançamento", 1)).
-                //IfTrue(x => x.Valor < 0, Message.A_X0_DEVE_SER_MAIOR_OU_IGUAL_A_X1.ToFormat("valor", 0)).
                 IfNull(x => x.Cosif, Message.OBJETO_X0_E_OBRIGATORIO.ToFormat("Cosif")).
                 IfNullOrInvalidLength(x => x.Descricao, 3, 50, Message.X0_E_OBRIGATORIA.ToFormat("Descrição")).
                 IfNullOrEmpty(x => x.Usuario, Message.X0_E_OBRIGATORIA.ToFormat("Usuario"));
+
+            if (Valor < 0) AddNotification("Valor", Message.A_X0_DEVE_SER_MAIOR_OU_IGUAL_A_X1.ToFormat("Valor", 0));
+            if (NumeroLancamento < 1) AddNotification("NumeroLancamento", Message.A_X0_DEVE_SER_MAIOR_OU_IGUAL_A_X1.ToFormat("Numero do Lançamento", 1));
+            if (Ano < 1) AddNotification("Ano", Message.A_X0_DEVE_SER_MAIOR_OU_IGUAL_A_X1.ToFormat("Ano", 1));
+            if (Mes < 1) AddNotification("Mes", Message.A_X0_DEVE_SER_MAIOR_OU_IGUAL_A_X1.ToFormat("Mês", 1));
         }
     }
 }
