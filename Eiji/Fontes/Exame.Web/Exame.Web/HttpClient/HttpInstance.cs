@@ -1,4 +1,6 @@
-﻿using System.Net.Http;
+﻿using System;
+using System.Net.Http;
+using System.Net.Http.Headers;
 
 namespace Exame.Web
 {
@@ -16,6 +18,8 @@ namespace Exame.Web
             {
                 httpClientInstance = new HttpClient();
                 httpClientInstance.DefaultRequestHeaders.ConnectionClose = false;
+                httpClientInstance.DefaultRequestHeaders.Accept.Clear();
+                httpClientInstance.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
             }
             return httpClientInstance;
         }

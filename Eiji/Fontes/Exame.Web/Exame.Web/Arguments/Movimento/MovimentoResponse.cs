@@ -10,6 +10,7 @@ namespace Exame.Dominio.Arguments.Movimento
         public short Ano { get; set; }
         public int NumeroLancamento { get; set; }
         public string Descricao { get; set; }
+        public DateTime DataMovimento { get; set; }
         public string Usuario { get; set; }
         public int Valor { get; set; }
 
@@ -22,6 +23,7 @@ namespace Exame.Dominio.Arguments.Movimento
                 Ano = entidade.Ano,
                 NumeroLancamento = entidade.NumeroLancamento,
                 Descricao = entidade.Descricao,
+                DataMovimento = entidade.DataMovimento,
                 Usuario = entidade.Usuario,
                 Valor = entidade.Valor
             };
