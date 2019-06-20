@@ -1,5 +1,6 @@
 ﻿using Exame.Dominio.Arguments.Base;
 using Exame.Dominio.Arguments.Movimento;
+using Exame.Dominio.Resources;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -15,13 +16,19 @@ namespace Exame.Dominio.Arguments.Cosif
 
         public static explicit operator CosifResponse(Entities.Cosif entidade)
         {
-            return new CosifResponse()
+            var cosif = new CosifResponse();
+            if (entidade != null)
             {
-                Codigo = entidade.Codigo,
-                Classificacao = entidade.Classificacao.ToString(),
-                Status = entidade.Status.ToString(),
-                Movimentos = entidade.Movimentos.Select(x => (MovimentoResponse)x).ToList()
-            };
+                cosif.Codigo = entidade.Codigo;
+                cosif.Classificacao = entidade.Classificacao.ToString();
+                cosif.Status = entidade.Status.ToString();
+                cosif.Movimentos = entidade.Movimentos?.Select(x => (MovimentoResponse)x).ToList() ?? null;
+            }
+            else
+            {
+                cosif.Mensagem = Message.DADOS_NAO_ENCONTRADOS;
+            }
+            return cosif;
         }
     }
 }

@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "D:\\MeuGitHub\\Exame\\Eiji\\Fontes\\Exame.App\\test\\Exame.DominioTeste\\Exame.DominioTeste.csproj": {}
+    "C:\\Exame\\Eiji\\Fontes\\Exame.App\\test\\Exame.DominioTeste\\Exame.DominioTeste.csproj": {}
   },
   "projects": {
-    "D:\\MeuGitHub\\Exame\\Eiji\\Fontes\\Exame.App\\test\\Exame.DominioTeste\\Exame.DominioTeste.csproj": {
+    "C:\\Exame\\Eiji\\Fontes\\Exame.App\\test\\Exame.DominioTeste\\Exame.DominioTeste.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\MeuGitHub\\Exame\\Eiji\\Fontes\\Exame.App\\test\\Exame.DominioTeste\\Exame.DominioTeste.csproj",
+        "projectUniqueName": "C:\\Exame\\Eiji\\Fontes\\Exame.App\\test\\Exame.DominioTeste\\Exame.DominioTeste.csproj",
         "projectName": "Exame.DominioTeste",
-        "projectPath": "D:\\MeuGitHub\\Exame\\Eiji\\Fontes\\Exame.App\\test\\Exame.DominioTeste\\Exame.DominioTeste.csproj",
-        "packagesPath": "C:\\Users\\vinic\\.nuget\\packages\\",
-        "outputPath": "D:\\MeuGitHub\\Exame\\Eiji\\Fontes\\Exame.App\\test\\Exame.DominioTeste\\obj\\",
+        "projectPath": "C:\\Exame\\Eiji\\Fontes\\Exame.App\\test\\Exame.DominioTeste\\Exame.DominioTeste.csproj",
+        "packagesPath": "C:\\Users\\vinicius.horiguchi\\.nuget\\packages\\",
+        "outputPath": "C:\\Exame\\Eiji\\Fontes\\Exame.App\\test\\Exame.DominioTeste\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\vinic\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\vinicius.horiguchi\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [

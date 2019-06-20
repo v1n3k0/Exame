@@ -1,5 +1,6 @@
 ﻿using Exame.Dominio.Arguments.Base;
 using Exame.Dominio.Arguments.Cosif;
+using Exame.Dominio.Resources;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -20,7 +21,7 @@ namespace Exame.Dominio.Arguments.Produto
                 Codigo = entidade.Codigo,
                 Descricao = entidade.Descricao,
                 Status = entidade.Status.ToString(),
-                Cosifs = entidade.Cosifs.Select(x => (CosifResponse)x).ToList()
+                Cosifs = entidade.Cosifs?.Select(x => (CosifResponse)x).ToList() ?? null
             };
         }
     }

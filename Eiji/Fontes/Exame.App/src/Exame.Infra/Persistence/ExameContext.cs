@@ -12,8 +12,8 @@ namespace Exame.Infra.Persistence
 
         public ExameContext() : base("ExameConnetionString")
         {
-            Configuration.ProxyCreationEnabled = true;
-            Configuration.LazyLoadingEnabled = true;
+            Configuration.ProxyCreationEnabled = false;
+            Configuration.LazyLoadingEnabled = false;
         }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
@@ -25,8 +25,8 @@ namespace Exame.Infra.Persistence
             modelBuilder.Conventions.Remove<PluralizingTableNameConvention>();
 
             //Remove exclusão em cascata
-            //modelBuilder.Conventions.Remove<OneToManyCascadeDeleteConvention>();
-            //modelBuilder.Conventions.Remove<ManyToManyCascadeDeleteConvention>();
+            modelBuilder.Conventions.Remove<OneToManyCascadeDeleteConvention>();
+            modelBuilder.Conventions.Remove<ManyToManyCascadeDeleteConvention>();
 
             //Setar para usar varchar ou invés de nvarchar
             modelBuilder.Properties<string>().Configure(p => p.HasColumnType("varchar"));
