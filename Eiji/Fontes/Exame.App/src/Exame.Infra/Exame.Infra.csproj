@@ -109,9 +109,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Migrations\201906190144250_criarbanco.cs" />
-    <Compile Include="Migrations\201906190144250_criarbanco.Designer.cs">
-      <DependentUpon>201906190144250_criarbanco.cs</DependentUpon>
+    <Compile Include="Migrations\201906202017511_CriarBanco.cs" />
+    <Compile Include="Migrations\201906202017511_CriarBanco.Designer.cs">
+      <DependentUpon>201906202017511_CriarBanco.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Persistence\ExameContext.cs" />
@@ -138,8 +138,8 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201906190144250_criarbanco.resx">
-      <DependentUpon>201906190144250_criarbanco.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201906202017511_CriarBanco.resx">
+      <DependentUpon>201906202017511_CriarBanco.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -1,4 +1,5 @@
-﻿using Exame.Web.Models;
+﻿using Exame.Dominio.Arguments.Movimento;
+using Exame.Web.Models;
 using Exame.Web.Service;
 using System.Collections.Generic;
 using System.Web.Mvc;
@@ -10,7 +11,7 @@ namespace Exame.Web.Controllers
         [HttpGet]
         public ActionResult Index()
         {
-            List<Movimento> movimentos = null;
+            List<MovimentoResponse> movimentos = null;
 
             var api = new ServiceMovimento();
 
@@ -22,13 +23,19 @@ namespace Exame.Web.Controllers
         [HttpGet]
         public ActionResult Create()
         {
-            var movimento = new Movimento();
+            var apiProduto = new ServiceProduto();
+            var apiCosif = new ServiceCosif();
+
+            ViewBag.Produtos = apiProduto.GetListar();
+            ViewBag.Cosif = apiCosif.GetListar();
+
+            var movimento = new AdicionarMovimentoRequest();
 
             return View(movimento);
         }
 
         [HttpPost]
-        public ActionResult Create(Movimento movimento)
+        public ActionResult Create(AdicionarMovimentoRequest movimento)
         {
 
             return RedirectToAction("Index");

@@ -17,6 +17,7 @@ namespace Exame.Dominio.Entities
         public int Valor { get; private set; }
         public Guid CodigoCosif { get; private set; }
         public virtual Cosif Cosif { get; private set; }
+        public Guid CodigoProduto { get; private set; }
 
         protected Movimento()
         {

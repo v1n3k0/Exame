@@ -3,7 +3,7 @@ namespace Exame.Infra.Migrations
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class criarbanco : DbMigration
+    public partial class CriarBanco : DbMigration
     {
         public override void Up()
         {
@@ -17,25 +17,26 @@ namespace Exame.Infra.Migrations
                         COD_PRODUTO = c.Guid(nullable: false),
                     })
                 .PrimaryKey(t => t.COD_COSIF)
-                .ForeignKey("dbo.PRODUTO", t => t.COD_PRODUTO, cascadeDelete: true)
+                .ForeignKey("dbo.PRODUTO", t => t.COD_PRODUTO)
                 .Index(t => t.COD_PRODUTO);
             
             CreateTable(
                 "dbo.MOVIMENTO_MANUAL",
                 c => new
                     {
-                        COD_MOVIMENTO_MANUAL = c.Guid(nullable: false, identity: true),
+                        COD_MOVIMENTO = c.Guid(nullable: false),
                         DAT_MES = c.Byte(nullable: false),
                         DAT_ANO = c.Short(nullable: false),
                         NUM_LANCAMENTO = c.Int(nullable: false),
+                        COD_PRODUTO = c.Guid(nullable: false),
                         DES_DESCRICAO = c.String(nullable: false, maxLength: 50, unicode: false),
                         DAT_MOVIMENTO = c.DateTime(nullable: false),
                         COD_USUARIO = c.String(nullable: false, maxLength: 15, unicode: false),
                         VAL_VALOR = c.Int(nullable: false),
                         COD_COSIF = c.Guid(nullable: false),
                     })
-                .PrimaryKey(t => t.COD_MOVIMENTO_MANUAL)
-                .ForeignKey("dbo.PRODUTO_COSIF", t => t.COD_COSIF, cascadeDelete: true)
+                .PrimaryKey(t => new { t.COD_MOVIMENTO, t.DAT_MES, t.DAT_ANO, t.NUM_LANCAMENTO, t.COD_PRODUTO })
+                .ForeignKey("dbo.PRODUTO_COSIF", t => t.COD_COSIF)
                 .Index(t => t.COD_COSIF);
             
             CreateTable(

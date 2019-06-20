@@ -1,4 +1,4 @@
-﻿@model IEnumerable<Exame.Web.Models.Movimento>
+﻿@model IEnumerable<Exame.Dominio.Arguments.Movimento.MovimentoResponse>
 
 @{
     ViewBag.Title = "Index";
@@ -12,6 +12,9 @@
 </p>
 <table class="table">
     <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Mensagem)
+        </th>
         <th>
             @Html.DisplayNameFor(model => model.Codigo)
         </th>
@@ -41,6 +44,9 @@
 
 @foreach (var item in Model) {
     <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Mensagem)
+        </td>
         <td>
             @Html.DisplayFor(modelItem => item.Codigo)
         </td>

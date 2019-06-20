@@ -12,3 +12,17 @@ C:\Exame\Eiji\Fontes\Exame\test\Exame.DominioTeste\bin\Debug\netcoreapp2.1\Exame
 C:\Exame\Eiji\Fontes\Exame\test\Exame.DominioTeste\obj\Debug\netcoreapp2.1\Exame.DominioTeste.dll
 C:\Exame\Eiji\Fontes\Exame\test\Exame.DominioTeste\obj\Debug\netcoreapp2.1\Exame.DominioTeste.pdb
 C:\Exame\Eiji\Fontes\Exame\test\Exame.DominioTeste\obj\Debug\netcoreapp2.1\Exame.DominioTeste.csprojAssemblyReference.cache
+C:\Exame\Eiji\Fontes\Exame.App\test\Exame.DominioTeste\bin\Debug\netcoreapp2.1\xunit.runner.visualstudio.dotnetcore.testadapter.dll
+C:\Exame\Eiji\Fontes\Exame.App\test\Exame.DominioTeste\bin\Debug\netcoreapp2.1\xunit.runner.reporters.netcoreapp10.dll
+C:\Exame\Eiji\Fontes\Exame.App\test\Exame.DominioTeste\bin\Debug\netcoreapp2.1\xunit.runner.utility.netcoreapp10.dll
+C:\Exame\Eiji\Fontes\Exame.App\test\Exame.DominioTeste\bin\Debug\netcoreapp2.1\Exame.DominioTeste.deps.json
+C:\Exame\Eiji\Fontes\Exame.App\test\Exame.DominioTeste\bin\Debug\netcoreapp2.1\Exame.DominioTeste.runtimeconfig.json
+C:\Exame\Eiji\Fontes\Exame.App\test\Exame.DominioTeste\bin\Debug\netcoreapp2.1\Exame.DominioTeste.runtimeconfig.dev.json
+C:\Exame\Eiji\Fontes\Exame.App\test\Exame.DominioTeste\bin\Debug\netcoreapp2.1\Exame.DominioTeste.dll
+C:\Exame\Eiji\Fontes\Exame.App\test\Exame.DominioTeste\bin\Debug\netcoreapp2.1\Exame.DominioTeste.pdb
+C:\Exame\Eiji\Fontes\Exame.App\test\Exame.DominioTeste\obj\Debug\netcoreapp2.1\Exame.DominioTeste.csprojAssemblyReference.cache
+C:\Exame\Eiji\Fontes\Exame.App\test\Exame.DominioTeste\obj\Debug\netcoreapp2.1\Exame.DominioTeste.csproj.CoreCompileInputs.cache
+C:\Exame\Eiji\Fontes\Exame.App\test\Exame.DominioTeste\obj\Debug\netcoreapp2.1\Exame.DominioTeste.AssemblyInfoInputs.cache
+C:\Exame\Eiji\Fontes\Exame.App\test\Exame.DominioTeste\obj\Debug\netcoreapp2.1\Exame.DominioTeste.AssemblyInfo.cs
+C:\Exame\Eiji\Fontes\Exame.App\test\Exame.DominioTeste\obj\Debug\netcoreapp2.1\Exame.DominioTeste.dll
+C:\Exame\Eiji\Fontes\Exame.App\test\Exame.DominioTeste\obj\Debug\netcoreapp2.1\Exame.DominioTeste.pdb

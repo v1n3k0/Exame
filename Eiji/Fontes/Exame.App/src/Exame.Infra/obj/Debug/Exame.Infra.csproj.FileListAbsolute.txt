@@ -105,9 +105,9 @@ C:\Exame\Eiji\Fontes\Exame.App\src\Exame.Infra\bin\Debug\EntityFramework.SqlServ
 C:\Exame\Eiji\Fontes\Exame.App\src\Exame.Infra\bin\Debug\System.Diagnostics.DiagnosticSource.xml
 C:\Exame\Eiji\Fontes\Exame.App\src\Exame.Infra\bin\Debug\en-US\prmToolkit.NotificationPattern.resources.dll
 C:\Exame\Eiji\Fontes\Exame.App\src\Exame.Infra\obj\Debug\Exame.Infra.csprojAssemblyReference.cache
-C:\Exame\Eiji\Fontes\Exame.App\src\Exame.Infra\obj\Debug\Exame.Infra.Migrations.criarbanco.resources
-C:\Exame\Eiji\Fontes\Exame.App\src\Exame.Infra\obj\Debug\Exame.Infra.csproj.GenerateResource.cache
 C:\Exame\Eiji\Fontes\Exame.App\src\Exame.Infra\obj\Debug\Exame.Infra.csproj.CoreCompileInputs.cache
 C:\Exame\Eiji\Fontes\Exame.App\src\Exame.Infra\obj\Debug\Exame.Infra.csproj.CopyComplete
 C:\Exame\Eiji\Fontes\Exame.App\src\Exame.Infra\obj\Debug\Exame.Infra.dll
 C:\Exame\Eiji\Fontes\Exame.App\src\Exame.Infra\obj\Debug\Exame.Infra.pdb
+C:\Exame\Eiji\Fontes\Exame.App\src\Exame.Infra\obj\Debug\Exame.Infra.Migrations.CriarBanco.resources
+C:\Exame\Eiji\Fontes\Exame.App\src\Exame.Infra\obj\Debug\Exame.Infra.csproj.GenerateResource.cache

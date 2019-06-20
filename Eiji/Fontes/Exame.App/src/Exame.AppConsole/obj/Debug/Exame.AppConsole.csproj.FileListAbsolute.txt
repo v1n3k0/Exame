@@ -10,3 +10,15 @@ C:\Exame\Eiji\Fontes\Exame\src\Exame.AppConsole\obj\Debug\Exame.AppConsole.cspro
 C:\Exame\Eiji\Fontes\Exame\src\Exame.AppConsole\obj\Debug\Exame.AppConsole.csproj.CopyComplete
 C:\Exame\Eiji\Fontes\Exame\src\Exame.AppConsole\obj\Debug\Exame.AppConsole.exe
 C:\Exame\Eiji\Fontes\Exame\src\Exame.AppConsole\obj\Debug\Exame.AppConsole.pdb
+C:\Exame\Eiji\Fontes\Exame.App\src\Exame.AppConsole\bin\Debug\Exame.AppConsole.exe.config
+C:\Exame\Eiji\Fontes\Exame.App\src\Exame.AppConsole\bin\Debug\Exame.AppConsole.exe
+C:\Exame\Eiji\Fontes\Exame.App\src\Exame.AppConsole\bin\Debug\Exame.AppConsole.pdb
+C:\Exame\Eiji\Fontes\Exame.App\src\Exame.AppConsole\bin\Debug\Exame.Dominio.dll
+C:\Exame\Eiji\Fontes\Exame.App\src\Exame.AppConsole\bin\Debug\prmToolkit.NotificationPattern.dll
+C:\Exame\Eiji\Fontes\Exame.App\src\Exame.AppConsole\bin\Debug\Exame.Dominio.pdb
+C:\Exame\Eiji\Fontes\Exame.App\src\Exame.AppConsole\bin\Debug\en-US\prmToolkit.NotificationPattern.resources.dll
+C:\Exame\Eiji\Fontes\Exame.App\src\Exame.AppConsole\obj\Debug\Exame.AppConsole.csprojAssemblyReference.cache
+C:\Exame\Eiji\Fontes\Exame.App\src\Exame.AppConsole\obj\Debug\Exame.AppConsole.csproj.CoreCompileInputs.cache
+C:\Exame\Eiji\Fontes\Exame.App\src\Exame.AppConsole\obj\Debug\Exame.AppConsole.csproj.CopyComplete
+C:\Exame\Eiji\Fontes\Exame.App\src\Exame.AppConsole\obj\Debug\Exame.AppConsole.exe
+C:\Exame\Eiji\Fontes\Exame.App\src\Exame.AppConsole\obj\Debug\Exame.AppConsole.pdb

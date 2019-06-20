@@ -51,7 +51,6 @@ C:\Exame\Eiji\Fontes\Exame.App\src\Exame.Dominio\bin\Debug\System.Security.Crypt
 C:\Exame\Eiji\Fontes\Exame.App\src\Exame.Dominio\bin\Debug\System.Security.Cryptography.X509Certificates.dll
 C:\Exame\Eiji\Fontes\Exame.App\src\Exame.Dominio\bin\Debug\System.Xml.ReaderWriter.dll
 C:\Exame\Eiji\Fontes\Exame.App\src\Exame.Dominio\bin\Debug\en-US\prmToolkit.NotificationPattern.resources.dll
-C:\Exame\Eiji\Fontes\Exame.App\src\Exame.Dominio\obj\Debug\Exame.Dominio.csprojAssemblyReference.cache
 C:\Exame\Eiji\Fontes\Exame.App\src\Exame.Dominio\obj\Debug\Exame.Dominio.Resources.Message.resources
 C:\Exame\Eiji\Fontes\Exame.App\src\Exame.Dominio\obj\Debug\Exame.Dominio.csproj.GenerateResource.cache
 C:\Exame\Eiji\Fontes\Exame.App\src\Exame.Dominio\obj\Debug\Exame.Dominio.csproj.CoreCompileInputs.cache
