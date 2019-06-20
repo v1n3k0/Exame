@@ -13,14 +13,14 @@ namespace Exame.Dominio.Arguments.Produto
         public string Status { get; set; }
         public IList<CosifResponse> Cosifs { get; set; }
 
-        public static explicit operator ProdutoResponse(Entities.Produto entidade)
+        public static explicit operator ProdutoResponse(Web.Produto entidade)
         {
             return new ProdutoResponse()
             {
                 Codigo = entidade.Codigo,
                 Descricao = entidade.Descricao,
                 Status = entidade.Status.ToString(),
-                Cosifs = entidade.Cosifs.Select(x => (CosifResponse)x).ToList()
+                Cosifs = entidade.Cosifs?.Select(x => (CosifResponse)x).ToList() ?? null
             };
         }
     }

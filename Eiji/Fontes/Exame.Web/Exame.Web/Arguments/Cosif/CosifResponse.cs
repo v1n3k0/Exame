@@ -13,14 +13,14 @@ namespace Exame.Dominio.Arguments.Cosif
         public string Status { get; set; }
         public List<MovimentoResponse> Movimentos { get; set; }
 
-        public static explicit operator CosifResponse(Entities.Cosif entidade)
+        public static explicit operator CosifResponse(Web.Models.Cosif entidade)
         {
             return new CosifResponse()
             {
                 Codigo = entidade.Codigo,
                 Classificacao = entidade.Classificacao.ToString(),
                 Status = entidade.Status.ToString(),
-                Movimentos = entidade.Movimentos.Select(x => (MovimentoResponse)x).ToList()
+                Movimentos = entidade.Movimentos?.Select(x => (MovimentoResponse)x).ToList() ?? null
             };
         }
     }

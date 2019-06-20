@@ -1,11 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
+﻿using Exame.Dominio.Entities.Base;
+using System;
 
 namespace Exame.Web.Models
 {
-    public class Movimento
+    public class Movimento : EntityBase
     {
         public byte Mes { get; set; }
         public short Ano { get; set; }

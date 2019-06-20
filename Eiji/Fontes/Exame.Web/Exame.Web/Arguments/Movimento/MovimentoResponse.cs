@@ -13,7 +13,7 @@ namespace Exame.Dominio.Arguments.Movimento
         public string Usuario { get; set; }
         public int Valor { get; set; }
 
-        public static explicit operator MovimentoResponse(Entities.Movimento entidade)
+        public static explicit operator MovimentoResponse(Web.Models.Movimento entidade)
         {
             return new MovimentoResponse()
             {
