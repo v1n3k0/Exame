@@ -123,12 +123,32 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Arguments\Base\RequestBase.cs" />
+    <Compile Include="Arguments\Base\ResponseBase.cs" />
+    <Compile Include="Arguments\Cosif\AdicionarCosifRequest.cs" />
+    <Compile Include="Arguments\Cosif\CosifResponse.cs" />
+    <Compile Include="Arguments\Cosif\EditarCosifRequest.cs" />
+    <Compile Include="Arguments\Movimento\AdicionarMovimentoRequest.cs" />
+    <Compile Include="Arguments\Movimento\EditarMovimentoRequest.cs" />
+    <Compile Include="Arguments\Movimento\MovimentoResponse.cs" />
+    <Compile Include="Arguments\Produto\AdicionarProdutoRequest.cs" />
+    <Compile Include="Arguments\Produto\EditarProdutoRequest.cs" />
+    <Compile Include="Arguments\Produto\ProdutoResponse.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\MovimentoController.cs" />
+    <Compile Include="Enum\EnumClassificacaoConta.cs" />
+    <Compile Include="Enum\EnumStatus.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="HttpInstance.cs" />
+    <Compile Include="Models\Cosif.cs" />
+    <Compile Include="Models\Movimento.cs" />
+    <Compile Include="Models\Produto.cs" />
+    <Compile Include="Service\HttpClient\HttpInstance.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Service\ServiceCosif.cs" />
+    <Compile Include="Service\ServiceMovimento.cs" />
+    <Compile Include="Service\ServiceProduto.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap-theme.css" />
@@ -169,8 +189,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Models\" />
-    <Folder Include="Service\" />
+    <Folder Include="Views\Movimento\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
