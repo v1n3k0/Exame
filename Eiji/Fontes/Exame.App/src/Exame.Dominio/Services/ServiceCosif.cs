@@ -6,7 +6,6 @@ using Exame.Dominio.Interfaces.Services;
 using Exame.Dominio.Resources;
 using prmToolkit.NotificationPattern;
 using prmToolkit.NotificationPattern.Extensions;
-using System;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -70,7 +69,7 @@ namespace Exame.Dominio.Services
                 return null;
             }
 
-            Cosif cosif = _repositoryCosif.ObterPorId(request.Codigo);
+            Cosif cosif = _repositoryCosif.ObterPorId(request.Codigo, request.CodigoProduto);
 
             if (cosif == null)
             {
@@ -98,7 +97,7 @@ namespace Exame.Dominio.Services
                 return null;
             }
 
-            cosif.Alterar(produto, classificacaoConta, status);
+            cosif.Alterar(classificacaoConta, status);
 
             AddNotifications(cosif);
 
@@ -115,9 +114,9 @@ namespace Exame.Dominio.Services
             return _repositoryCosif.Listar().ToList().Select(x => (CosifResponse)x).ToList();
         }
 
-        public CosifResponse Obter(Guid codigo)
+        public CosifResponse Obter(ObterCosifRequest request)
         {
-            Cosif cosif = _repositoryCosif.ObterPorId(codigo);
+            Cosif cosif = _repositoryCosif.ObterPorId(request.CodigoCosif, request.CodigoProduto);
 
             if (cosif == null)
             {
@@ -128,9 +127,9 @@ namespace Exame.Dominio.Services
             return (CosifResponse)cosif;
         }
 
-        public ResponseBase Remover(Guid codigo)
+        public ResponseBase Remover(RemoverCosifRequest request)
         {
-            Cosif cosif = _repositoryCosif.ObterPorId(codigo);
+            Cosif cosif = _repositoryCosif.ObterPorId(request.CodigoCosif, request.CodigoProduto);
 
             if (cosif == null)
             {

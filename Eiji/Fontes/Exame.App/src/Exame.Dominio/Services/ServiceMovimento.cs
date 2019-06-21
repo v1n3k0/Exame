@@ -6,7 +6,6 @@ using Exame.Dominio.Interfaces.Services;
 using Exame.Dominio.Resources;
 using prmToolkit.NotificationPattern;
 using prmToolkit.NotificationPattern.Extensions;
-using System;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -16,16 +15,19 @@ namespace Exame.Dominio.Services
     {
         private readonly IRepositoryMovimento _repositoryMovimento;
         private readonly IRepositoryCosif _repositoryCosif;
+        private readonly IRepositoryProduto _repositoryProduto;
 
         protected ServiceMovimento()
         {
 
         }
 
-        public ServiceMovimento(IRepositoryMovimento repositoryMovimento, IRepositoryCosif repositoryCosif)
+        public ServiceMovimento(IRepositoryMovimento repositoryMovimento, IRepositoryCosif repositoryCosif, 
+            IRepositoryProduto repositoryProduto)
         {
             _repositoryMovimento = repositoryMovimento;
             _repositoryCosif = repositoryCosif;
+            _repositoryProduto = repositoryProduto;
         }
 
         public MovimentoResponse Adicionar(AdicionarMovimentoRequest request)
@@ -36,7 +38,7 @@ namespace Exame.Dominio.Services
                 return null;
             }
 
-            Cosif cosif = _repositoryCosif.ObterPorId(request.CodigoCosif);
+            Cosif cosif = _repositoryCosif.ObterPorId(request.CodigoCosif, request.CodigoProduto );
 
             if (cosif == null)
             {
@@ -44,7 +46,17 @@ namespace Exame.Dominio.Services
                 return null;
             }
 
-            var movimento = new Movimento(request.Mes, request.Ano, request.NumeroLancamento, cosif, request.Descricao,
+            Produto produto = _repositoryProduto.ObterPorId(request.CodigoProduto);
+
+            if (produto == null)
+            {
+                AddNotification("CodigoProduto", Message.DADOS_NAO_ENCONTRADOS);
+                return null;
+            }
+
+            var numeroLancamento = _repositoryMovimento.GerarNumeroLancamento(request.Mes, request.Ano);
+
+            var movimento = new Movimento(request.Mes, request.Ano, numeroLancamento, cosif, produto, request.Descricao,
                 request.Valor);
 
             AddNotifications(movimento);
@@ -65,7 +77,8 @@ namespace Exame.Dominio.Services
                 return null;
             }
 
-            Movimento movimento = _repositoryMovimento.ObterPorId(request.Codigo);
+            Movimento movimento = _repositoryMovimento.ObterPorId(request.CodigoMovimento, request.Mes, request.Ano, 
+                request.NumeroLancamento, request.CodigoCosif, request.CodigoProduto);
 
             if (movimento == null)
             {
@@ -73,7 +86,7 @@ namespace Exame.Dominio.Services
                 return null;
             }
 
-            Cosif cosif = _repositoryCosif.ObterPorId(request.CodigoCosif);
+            Cosif cosif = _repositoryCosif.ObterPorId(request.CodigoCosif, request.CodigoProduto);
 
             if (cosif == null)
             {
@@ -81,7 +94,7 @@ namespace Exame.Dominio.Services
                 return null;
             }
 
-            movimento.Alterar(request.Mes, request.Ano, request.NumeroLancamento, cosif, request.Descricao,
+            movimento.Alterar(request.Mes, request.Ano, request.NumeroLancamento, request.Descricao,
                 request.Valor);
 
             AddNotifications(movimento);
@@ -99,9 +112,10 @@ namespace Exame.Dominio.Services
             return _repositoryMovimento.Listar().ToList().Select(x => (MovimentoResponse)x).ToList();
         }
 
-        public MovimentoResponse Obter(Guid codigo)
+        public MovimentoResponse Obter(ObterMovimentoRequest request)
         {
-            Movimento movimento = _repositoryMovimento.ObterPorId(codigo);
+            Movimento movimento = _repositoryMovimento.ObterPorId(request.CodigoMovimento, request.Mes, request.Ano,
+                request.NumeroLancamento, request.CodigoCosif, request.CodigoProduto);
 
             if (movimento == null)
             {
@@ -112,9 +126,10 @@ namespace Exame.Dominio.Services
             return (MovimentoResponse)movimento;
         }
 
-        public ResponseBase Remover(Guid codigo)
+        public ResponseBase Remover(RemoverMovimentoRequest request)
         {
-            Movimento movimento = _repositoryMovimento.ObterPorId(codigo);
+            Movimento movimento = _repositoryMovimento.ObterPorId(request.CodigoMovimento, request.Mes, request.Ano,
+                request.NumeroLancamento, request.CodigoCosif, request.CodigoProduto);
 
             if (movimento == null)
             {

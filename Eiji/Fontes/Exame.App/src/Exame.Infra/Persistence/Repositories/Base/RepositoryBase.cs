@@ -35,15 +35,15 @@ namespace Exame.Infra.Persistence.Repositories.Base
             return Listar(includeProperties).FirstOrDefault(where);
         }
 
-        public TEntidade ObterPorId(TId id, params Expression<Func<TEntidade, object>>[] includeProperties)
-        {
-            if (includeProperties.Any())
-            {
-                return Listar(includeProperties).FirstOrDefault(x => x.Codigo.ToString() == id.ToString());
-            }
+        //public TEntidade ObterPorId(TId id, params Expression<Func<TEntidade, object>>[] includeProperties)
+        //{
+        //    if (includeProperties.Any())
+        //    {
+        //        return Listar(includeProperties).FirstOrDefault(x => x.Codigo.ToString() == id.ToString());
+        //    }
 
-            return _context.Set<TEntidade>().Find(id);
-        }
+        //    return _context.Set<TEntidade>().Find(id);
+        //}
 
         public IQueryable<TEntidade> Listar(params Expression<Func<TEntidade, object>>[] includeProperties)
         {

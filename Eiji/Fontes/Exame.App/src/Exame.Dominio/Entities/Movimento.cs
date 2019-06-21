@@ -18,18 +18,20 @@ namespace Exame.Dominio.Entities
         public Guid CodigoCosif { get; private set; }
         public virtual Cosif Cosif { get; private set; }
         public Guid CodigoProduto { get; private set; }
+        public virtual Produto Produto { get; private set; }
 
         protected Movimento()
         {
 
         }
 
-        public Movimento(byte mes, short ano, int numeroLacamento, Cosif cosif, string descricao, int valor)
+        public Movimento(byte mes, short ano, int numeroLacamento, Cosif cosif, Produto produto, string descricao, int valor)
         {
             Mes = mes;
             Ano = ano;
             NumeroLancamento = numeroLacamento;
             Cosif = cosif;
+            Produto = produto;
             Descricao = descricao;
             DataMovimento = DateTime.Now;
             Usuario = "TESTE";
@@ -38,12 +40,11 @@ namespace Exame.Dominio.Entities
             ValidarEntidade();
         }
 
-        public void Alterar(byte mes, short ano, int numeroLacamento, Cosif cosif, string descricao, int valor)
+        public void Alterar(byte mes, short ano, int numeroLacamento, string descricao, int valor)
         {
             Mes = mes;
             Ano = ano;
             NumeroLancamento = numeroLacamento;
-            Cosif = cosif;
             Descricao = descricao;
             DataMovimento = DateTime.Now;
             Usuario = "TESTE";

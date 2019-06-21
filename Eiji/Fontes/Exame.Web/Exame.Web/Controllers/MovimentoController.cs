@@ -1,5 +1,4 @@
 ﻿using Exame.Dominio.Arguments.Movimento;
-using Exame.Web.Models;
 using Exame.Web.Service;
 using System.Collections.Generic;
 using System.Web.Mvc;

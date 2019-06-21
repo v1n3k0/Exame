@@ -21,7 +21,7 @@ namespace Exame.Dominio.Interfaces.Repositories.Base
 
         IQueryable<TEntidade> ListarOrdenadosPor<TKey>(Expression<Func<TEntidade, TKey>> ordem, bool ascendente = true, params Expression<Func<TEntidade, object>>[] includeProperties);
 
-        TEntidade ObterPorId(TId id, params Expression<Func<TEntidade, object>>[] includeProperties);
+        //TEntidade ObterPorId(TId id, params Expression<Func<TEntidade, object>>[] includeProperties);
 
         TEntidade Adicionar(TEntidade entidade);
 

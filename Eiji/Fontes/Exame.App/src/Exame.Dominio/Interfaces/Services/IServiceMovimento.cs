@@ -1,7 +1,6 @@
 ﻿using Exame.Dominio.Arguments.Base;
 using Exame.Dominio.Arguments.Movimento;
 using Exame.Dominio.Interfaces.Services.Base;
-using System;
 using System.Collections.Generic;
 
 namespace Exame.Dominio.Interfaces.Services
@@ -12,9 +11,9 @@ namespace Exame.Dominio.Interfaces.Services
 
         MovimentoResponse Editar(EditarMovimentoRequest request);
 
-        MovimentoResponse Obter(Guid codigo);
+        MovimentoResponse Obter(ObterMovimentoRequest request);
 
-        ResponseBase Remover(Guid codigo);
+        ResponseBase Remover(RemoverMovimentoRequest request);
 
         IEnumerable<MovimentoResponse> Listar();
     }

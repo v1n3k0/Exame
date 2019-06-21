@@ -13,5 +13,10 @@ namespace Exame.Infra.Persistence.Repositories
         {
             _context = context;
         }
+
+        public Produto ObterPorId(Guid id)
+        {
+            return _context.Set<Produto>().Find(id);
+        }
     }
 }

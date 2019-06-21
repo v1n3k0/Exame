@@ -1,7 +1,6 @@
 ﻿using Exame.Dominio.Arguments.Base;
 using Exame.Dominio.Arguments.Cosif;
 using Exame.Dominio.Interfaces.Services.Base;
-using System;
 using System.Collections.Generic;
 
 namespace Exame.Dominio.Interfaces.Services
@@ -12,9 +11,9 @@ namespace Exame.Dominio.Interfaces.Services
 
         CosifResponse Editar(EditarCosifRequest request);
 
-        CosifResponse Obter(Guid codigo);
+        CosifResponse Obter(ObterCosifRequest request);
 
-        ResponseBase Remover(Guid codigo);
+        ResponseBase Remover(RemoverCosifRequest request);
 
         IEnumerable<CosifResponse> Listar();
     }

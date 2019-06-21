@@ -6,5 +6,6 @@ namespace Exame.Dominio.Interfaces.Repositories
 {
     public interface IRepositoryCosif : IRepositoryBase<Cosif, Guid>
     {
+        Cosif ObterPorId(Guid codigoCosif, Guid codigoProduto);
     }
 }

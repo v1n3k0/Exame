@@ -20,8 +20,8 @@ namespace Exame.Infra.Persistence.Map
             Property(p => p.CodigoCosif).IsRequired().HasColumnName("COD_COSIF");
             Property(p => p.CodigoProduto).IsRequired().HasColumnName("COD_PRODUTO");
 
-            HasKey(x => new { x.Codigo, x.Mes, x.Ano, x.NumeroLancamento, x.CodigoProduto });
-            HasRequired(m => m.Cosif).WithMany(c => c.Movimentos).HasForeignKey(m => m.CodigoCosif);
+            HasKey(x => new { x.Codigo, x.Mes, x.Ano, x.NumeroLancamento, x.CodigoCosif, x.CodigoProduto });
+            HasRequired(m => m.Cosif).WithMany(c => c.Movimentos).HasForeignKey(m => new { m.CodigoCosif, m.CodigoProduto });
         }
     }
 }

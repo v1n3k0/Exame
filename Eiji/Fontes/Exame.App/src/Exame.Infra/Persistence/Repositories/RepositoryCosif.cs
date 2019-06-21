@@ -13,5 +13,10 @@ namespace Exame.Infra.Persistence.Repositories
         {
             _context = context;
         }
+
+        public Cosif ObterPorId(Guid codigoCosif, Guid codigoProduto)
+        {
+            return _context.Set<Cosif>().Find(codigoCosif, codigoProduto);
+        }
     }
 }

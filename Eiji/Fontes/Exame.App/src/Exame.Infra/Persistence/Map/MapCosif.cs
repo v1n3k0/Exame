@@ -1,9 +1,9 @@
 ﻿using Exame.Dominio.Entities;
-using Exame.Infra.Persistence.Map.Base;
+using System.Data.Entity.ModelConfiguration;
 
 namespace Exame.Infra.Persistence.Map
 {
-    class MapCosif : MapBase<Cosif>
+    class MapCosif : EntityTypeConfiguration<Cosif>
     {
         public MapCosif()
         {
@@ -14,6 +14,7 @@ namespace Exame.Infra.Persistence.Map
             Property(p => p.Classificacao).HasColumnName("COD_CLASSIFICACAO");
             Property(p => p.Status).HasColumnName("STA_STATUS");
 
+            HasKey(x => new { x.Codigo, x.CodigoProduto });
             HasRequired(c => c.Produto).WithMany(p => p.Cosifs).HasForeignKey(c => c.CodigoProduto);
         }
     }

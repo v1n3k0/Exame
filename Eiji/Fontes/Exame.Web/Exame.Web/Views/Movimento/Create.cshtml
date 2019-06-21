@@ -33,14 +33,6 @@
         </div>
 
         <div class="form-group">
-            @Html.LabelFor(model => model.NumeroLancamento, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.NumeroLancamento, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.NumeroLancamento, "", new { @class = "text-danger" })
-            </div>
-        </div>
-
-        <div class="form-group">
             @Html.LabelFor(model => model.CodigoCosif, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
                 @Html.EditorFor(model => model.CodigoCosif, new { htmlAttributes = new { @class = "form-control" } })

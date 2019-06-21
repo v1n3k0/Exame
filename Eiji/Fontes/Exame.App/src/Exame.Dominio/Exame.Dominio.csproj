@@ -79,9 +79,13 @@
     <Compile Include="Arguments\Cosif\AdicionarCosifRequest.cs" />
     <Compile Include="Arguments\Cosif\EditarCosifRequest.cs" />
     <Compile Include="Arguments\Cosif\CosifResponse.cs" />
+    <Compile Include="Arguments\Cosif\ObterCosifRequest.cs" />
+    <Compile Include="Arguments\Cosif\RemoverCosifRequest.cs" />
     <Compile Include="Arguments\Movimento\AdicionarMovimentoRequest.cs" />
     <Compile Include="Arguments\Movimento\EditarMovimentoRequest.cs" />
     <Compile Include="Arguments\Movimento\MovimentoResponse.cs" />
+    <Compile Include="Arguments\Movimento\ObterMovimentoRequest.cs" />
+    <Compile Include="Arguments\Movimento\RemoverMovimentoRequest.cs" />
     <Compile Include="Arguments\Produto\AdicionarProdutoRequest.cs" />
     <Compile Include="Arguments\Produto\EditarProdutoRequest.cs" />
     <Compile Include="Arguments\Produto\ProdutoResponse.cs" />

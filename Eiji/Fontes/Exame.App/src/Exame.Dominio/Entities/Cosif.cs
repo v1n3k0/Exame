@@ -31,9 +31,8 @@ namespace Exame.Dominio.Entities
             ValidarEntidade();
         }
 
-        public void Alterar(Produto produto, EnumClassificacaoConta classificacaoConta, EnumStatus status)
+        public void Alterar(EnumClassificacaoConta classificacaoConta, EnumStatus status)
         {
-            Produto = produto;
             Classificacao = classificacaoConta;
             Status = status;
 

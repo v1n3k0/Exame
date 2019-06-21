@@ -5,6 +5,7 @@ namespace Exame.Dominio.Arguments.Movimento
 {
     public class MovimentoResponse: ResponseBase
     {
+        public Guid CodigoMovimento { get; set; }
         public byte Mes { get; set; }
         public short Ano { get; set; }
         public int NumeroLancamento { get; set; }
@@ -19,6 +20,7 @@ namespace Exame.Dominio.Arguments.Movimento
         {
             return new MovimentoResponse()
             {
+                CodigoMovimento = entidade.Codigo,
                 Mes = entidade.Mes,
                 Ano = entidade.Ano,
                 NumeroLancamento = entidade.NumeroLancamento,

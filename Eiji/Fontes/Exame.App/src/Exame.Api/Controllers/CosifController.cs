@@ -53,11 +53,11 @@ namespace Exame.Api.Controllers
 
         [Route("Obter")]
         [HttpGet]
-        public async Task<HttpResponseMessage> Obter(Guid id)
+        public async Task<HttpResponseMessage> Obter(ObterCosifRequest request)
         {
             try
             {
-                var response = _serviceCosif.Obter(id);
+                var response = _serviceCosif.Obter(request);
 
                 return await ResponseAsync(response, _serviceCosif);
             }
@@ -70,11 +70,11 @@ namespace Exame.Api.Controllers
         //[Authorize]
         [Route("Remover")]
         [HttpDelete]
-        public async Task<HttpResponseMessage> Remover(Guid id)
+        public async Task<HttpResponseMessage> Remover(RemoverCosifRequest request)
         {
             try
             {
-                var response = _serviceCosif.Remover(id);
+                var response = _serviceCosif.Remover(request);
 
                 return await ResponseAsync(response, _serviceCosif);
             }
