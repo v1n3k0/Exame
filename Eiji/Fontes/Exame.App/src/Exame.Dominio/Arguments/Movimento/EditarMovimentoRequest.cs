@@ -5,7 +5,6 @@ namespace Exame.Dominio.Arguments.Movimento
 {
     public class EditarMovimentoRequest : RequestBase
     {
-        public Guid CodigoMovimento { get; set; }
         public byte Mes { get; set; }
         public short Ano { get; set; }
         public int NumeroLancamento { get; set; }

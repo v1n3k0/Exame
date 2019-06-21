@@ -6,7 +6,7 @@ namespace Exame.Dominio.Interfaces.Repositories
 {
     public interface IRepositoryMovimento : IRepositoryBase<Movimento>
     {
-        Movimento ObterPorId(Guid codigo, byte mes, short ano, int numeroLancamento, Guid codigoCosif, Guid codigoProduto);
+        Movimento ObterPorId(byte mes, short ano, int numeroLancamento, Guid codigoCosif, Guid codigoProduto);
         int GerarNumeroLancamento(byte mes, short ano);
     }
 }

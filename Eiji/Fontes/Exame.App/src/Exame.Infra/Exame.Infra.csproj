@@ -117,6 +117,18 @@
     <Compile Include="Migrations\201906211317126_Relacionamento.Designer.cs">
       <DependentUpon>201906211317126_Relacionamento.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201906211426241_RemoverCodigoMovimento.cs" />
+    <Compile Include="Migrations\201906211426241_RemoverCodigoMovimento.Designer.cs">
+      <DependentUpon>201906211426241_RemoverCodigoMovimento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201906211433580_CorrecaoCodigoMovimento.cs" />
+    <Compile Include="Migrations\201906211433580_CorrecaoCodigoMovimento.Designer.cs">
+      <DependentUpon>201906211433580_CorrecaoCodigoMovimento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201906211453456_CorrecaoMovimentoCodigoProduto.cs" />
+    <Compile Include="Migrations\201906211453456_CorrecaoMovimentoCodigoProduto.Designer.cs">
+      <DependentUpon>201906211453456_CorrecaoMovimentoCodigoProduto.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Persistence\ExameContext.cs" />
     <Compile Include="Persistence\Map\Base\MapBase.cs" />
@@ -147,6 +159,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201906211317126_Relacionamento.resx">
       <DependentUpon>201906211317126_Relacionamento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201906211426241_RemoverCodigoMovimento.resx">
+      <DependentUpon>201906211426241_RemoverCodigoMovimento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201906211433580_CorrecaoCodigoMovimento.resx">
+      <DependentUpon>201906211433580_CorrecaoCodigoMovimento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201906211453456_CorrecaoMovimentoCodigoProduto.resx">
+      <DependentUpon>201906211453456_CorrecaoMovimentoCodigoProduto.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

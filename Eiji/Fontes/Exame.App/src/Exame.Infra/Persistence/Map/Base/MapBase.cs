@@ -9,8 +9,6 @@ namespace Exame.Infra.Persistence.Map.Base
     {
         public MapBase()
         {
-            HasKey(x => x.Codigo).Property(x => x.Codigo).IsRequired()
-                .HasDatabaseGeneratedOption(DatabaseGeneratedOption.Identity);
         }
     }
 }

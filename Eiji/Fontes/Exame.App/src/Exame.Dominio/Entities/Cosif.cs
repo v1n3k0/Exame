@@ -10,6 +10,7 @@ namespace Exame.Dominio.Entities
 {
     public class Cosif : EntityBase
     {
+        public Guid Codigo { get; private set; }
         public EnumClassificacaoConta Classificacao { get; private set; }
         public EnumStatus Status { get; private set; }
         public Guid CodigoProduto { get; private set; }
@@ -18,11 +19,11 @@ namespace Exame.Dominio.Entities
 
         protected Cosif()
         {
-
         }
 
         public Cosif(Produto produto, EnumClassificacaoConta classificacaoConta, EnumStatus status)
         {
+            Codigo = Guid.NewGuid();
             Produto = produto;
             Classificacao = classificacaoConta;
             Status = status;

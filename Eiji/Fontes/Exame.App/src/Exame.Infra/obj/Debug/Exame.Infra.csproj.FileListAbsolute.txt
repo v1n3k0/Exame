@@ -112,3 +112,6 @@ C:\Exame\Eiji\Fontes\Exame.App\src\Exame.Infra\obj\Debug\Exame.Infra.pdb
 C:\Exame\Eiji\Fontes\Exame.App\src\Exame.Infra\obj\Debug\Exame.Infra.Migrations.CriarBanco.resources
 C:\Exame\Eiji\Fontes\Exame.App\src\Exame.Infra\obj\Debug\Exame.Infra.csproj.GenerateResource.cache
 C:\Exame\Eiji\Fontes\Exame.App\src\Exame.Infra\obj\Debug\Exame.Infra.Migrations.Relacionamento.resources
+C:\Exame\Eiji\Fontes\Exame.App\src\Exame.Infra\obj\Debug\Exame.Infra.Migrations.RemoverCodigoMovimento.resources
+C:\Exame\Eiji\Fontes\Exame.App\src\Exame.Infra\obj\Debug\Exame.Infra.Migrations.CorrecaoCodigoMovimento.resources
+C:\Exame\Eiji\Fontes\Exame.App\src\Exame.Infra\obj\Debug\Exame.Infra.Migrations.CorrecaoMovimentoCodigoProduto.resources

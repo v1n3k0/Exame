@@ -9,9 +9,11 @@ namespace Exame.Infra.Persistence.Map
         {
             ToTable("PRODUTO");
 
-            Property(p => p.Codigo).HasColumnName("COD_PRODUTO");
+            Property(p => p.Codigo).IsRequired().HasColumnName("COD_PRODUTO");
             Property(p => p.Descricao).HasMaxLength(30).HasColumnName("DES_PRODUTO");
             Property(p => p.Status).HasColumnName("STA_STATUS");
+
+            HasKey(x => x.Codigo);
         }
     }
 }

@@ -3,13 +3,14 @@ using Exame.Dominio.Enum;
 using Exame.Dominio.Resources;
 using prmToolkit.NotificationPattern;
 using prmToolkit.NotificationPattern.Extensions;
+using System;
 using System.Collections.Generic;
 
 namespace Exame.Dominio.Entities
 {
     public class Produto : EntityBase
     {
-
+        public Guid Codigo { get; private set; }
         public string Descricao { get; private set; }
         public EnumStatus Status { get; private set; }
         public virtual ICollection<Cosif> Cosifs { get; set; }
@@ -21,6 +22,7 @@ namespace Exame.Dominio.Entities
 
         public Produto(string descricao, EnumStatus status)
         {
+            Codigo = Guid.NewGuid();
             Descricao = descricao;
             Status = status;
             Cosifs = new List<Cosif>();

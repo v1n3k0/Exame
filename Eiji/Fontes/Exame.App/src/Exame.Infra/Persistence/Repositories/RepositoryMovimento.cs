@@ -15,9 +15,9 @@ namespace Exame.Infra.Persistence.Repositories
             _context = context;
         }
 
-        public Movimento ObterPorId(Guid codigo, byte mes, short ano, int numeroLancamento, Guid codigoCosif, Guid codigoProduto)
+        public Movimento ObterPorId(byte mes, short ano, int numeroLancamento, Guid codigoCosif, Guid codigoProduto)
         {
-            return _context.Set<Movimento>().Find(codigo, mes, ano, numeroLancamento, codigoCosif, codigoProduto);
+            return _context.Set<Movimento>().Find(mes, ano, numeroLancamento, codigoCosif, codigoProduto);
         }
 
         public int GerarNumeroLancamento(byte mes, short ano)

@@ -45,18 +45,10 @@ namespace Exame.Dominio.Services
                 AddNotification("CodigoCosif", Message.DADOS_NAO_ENCONTRADOS);
                 return null;
             }
-
-            Produto produto = _repositoryProduto.ObterPorId(request.CodigoProduto);
-
-            if (produto == null)
-            {
-                AddNotification("CodigoProduto", Message.DADOS_NAO_ENCONTRADOS);
-                return null;
-            }
-
+            
             var numeroLancamento = _repositoryMovimento.GerarNumeroLancamento(request.Mes, request.Ano);
 
-            var movimento = new Movimento(request.Mes, request.Ano, numeroLancamento, cosif, produto, request.Descricao,
+            var movimento = new Movimento(request.Mes, request.Ano, numeroLancamento, cosif, request.CodigoProduto, request.Descricao,
                 request.Valor);
 
             AddNotifications(movimento);
@@ -77,7 +69,7 @@ namespace Exame.Dominio.Services
                 return null;
             }
 
-            Movimento movimento = _repositoryMovimento.ObterPorId(request.CodigoMovimento, request.Mes, request.Ano, 
+            Movimento movimento = _repositoryMovimento.ObterPorId(request.Mes, request.Ano, 
                 request.NumeroLancamento, request.CodigoCosif, request.CodigoProduto);
 
             if (movimento == null)
@@ -114,7 +106,7 @@ namespace Exame.Dominio.Services
 
         public MovimentoResponse Obter(ObterMovimentoRequest request)
         {
-            Movimento movimento = _repositoryMovimento.ObterPorId(request.CodigoMovimento, request.Mes, request.Ano,
+            Movimento movimento = _repositoryMovimento.ObterPorId(request.Mes, request.Ano,
                 request.NumeroLancamento, request.CodigoCosif, request.CodigoProduto);
 
             if (movimento == null)
@@ -128,7 +120,7 @@ namespace Exame.Dominio.Services
 
         public ResponseBase Remover(RemoverMovimentoRequest request)
         {
-            Movimento movimento = _repositoryMovimento.ObterPorId(request.CodigoMovimento, request.Mes, request.Ano,
+            Movimento movimento = _repositoryMovimento.ObterPorId(request.Mes, request.Ano,
                 request.NumeroLancamento, request.CodigoCosif, request.CodigoProduto);
 
             if (movimento == null)
