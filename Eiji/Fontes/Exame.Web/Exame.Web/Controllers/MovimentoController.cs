@@ -1,4 +1,5 @@
-﻿using Exame.Dominio.Arguments.Movimento;
+﻿using Exame.Web.Arguments.Movimento;
+using Exame.Web.Models;
 using Exame.Web.Service;
 using System.Collections.Generic;
 using System.Web.Mvc;
@@ -10,7 +11,7 @@ namespace Exame.Web.Controllers
         [HttpGet]
         public ActionResult Index()
         {
-            List<MovimentoResponse> movimentos = null;
+            List<Movimento> movimentos = null;
 
             var api = new ServiceMovimento();
 

@@ -1,7 +1,7 @@
-﻿using Exame.Dominio.Arguments.Base;
+﻿using Exame.Web.Arguments.Base;
 using System;
 
-namespace Exame.Dominio.Arguments.Cosif
+namespace Exame.Web.Arguments.Cosif
 {
     public class EditarCosifRequest : RequestBase
     {

@@ -1,10 +1,10 @@
-﻿using Exame.Dominio.Arguments.Base;
-using Exame.Dominio.Arguments.Cosif;
+﻿using Exame.Web.Arguments.Base;
+using Exame.Web.Arguments.Cosif;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace Exame.Dominio.Arguments.Produto
+namespace Exame.Web.Arguments.Produto
 {
     public class ProdutoResponse : ResponseBase
     {
@@ -13,7 +13,7 @@ namespace Exame.Dominio.Arguments.Produto
         public string Status { get; set; }
         public IList<CosifResponse> Cosifs { get; set; }
 
-        public static explicit operator ProdutoResponse(Web.Produto entidade)
+        public static explicit operator ProdutoResponse(Models.Produto entidade)
         {
             return new ProdutoResponse()
             {

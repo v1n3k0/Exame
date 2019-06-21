@@ -1,6 +1,5 @@
 ﻿using Exame.Dominio.Arguments.Base;
 using Exame.Dominio.Arguments.Cosif;
-using Exame.Dominio.Resources;
 using System;
 using System.Collections.Generic;
 using System.Linq;

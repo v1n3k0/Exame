@@ -1,4 +1,4 @@
-﻿using Exame.Dominio.Arguments.Produto;
+﻿using Exame.Web.Arguments.Produto;
 using Newtonsoft.Json;
 using System.Collections.Generic;
 using System.Net.Http;

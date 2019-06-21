@@ -1,7 +1,7 @@
-﻿using Exame.Dominio.Arguments.Base;
+﻿using Exame.Web.Arguments.Base;
 using System;
 
-namespace Exame.Dominio.Arguments.Produto
+namespace Exame.Web.Arguments.Produto
 {
     public class EditarProdutoRequest: RequestBase
     {

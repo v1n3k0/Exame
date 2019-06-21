@@ -1,4 +1,4 @@
-﻿using Exame.Dominio.Arguments.Cosif;
+﻿using Exame.Web.Arguments.Cosif;
 using Newtonsoft.Json;
 using System.Collections.Generic;
 using System.Net.Http;

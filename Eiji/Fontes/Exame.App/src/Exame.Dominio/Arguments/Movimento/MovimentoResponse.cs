@@ -1,4 +1,5 @@
 ﻿using Exame.Dominio.Arguments.Base;
+using Exame.Dominio.Arguments.Cosif;
 using System;
 
 namespace Exame.Dominio.Arguments.Movimento
@@ -14,6 +15,7 @@ namespace Exame.Dominio.Arguments.Movimento
         public int Valor { get; set; }
         public Guid CodigoProduto { get; set; }
         public Guid CodigoCosif { get; set; }
+        public CosifResponse Cosif { get; set; }
 
         public static explicit operator MovimentoResponse(Entities.Movimento entidade)
         {
@@ -27,7 +29,8 @@ namespace Exame.Dominio.Arguments.Movimento
                 Usuario = entidade.Usuario,
                 Valor = entidade.Valor,
                 CodigoProduto = entidade.CodigoProduto,
-                CodigoCosif = entidade.CodigoCosif
+                CodigoCosif = entidade.CodigoCosif,
+                Cosif = entidade.Cosif != null ? (CosifResponse)entidade.Cosif : null
             };
         }
     }

@@ -1,6 +1,8 @@
-﻿using Exame.Dominio.Arguments.Movimento;
+﻿using Exame.Web.Arguments.Movimento;
+using Exame.Web.Models;
 using Newtonsoft.Json;
 using System.Collections.Generic;
+using System.Linq;
 using System.Net.Http;
 
 namespace Exame.Web.Service
@@ -9,7 +11,7 @@ namespace Exame.Web.Service
     {
         private const string BASEURL = "https://localhost:44335/api/Movimento/";
 
-        public List<MovimentoResponse> GetListar()
+        public List<Movimento> GetListar()
         {
             string action = "Listar";
 
@@ -19,7 +21,9 @@ namespace Exame.Web.Service
 
             var movimentosJson = response.Content.ReadAsStringAsync().Result;
 
-            return JsonConvert.DeserializeObject<List<MovimentoResponse>>(movimentosJson);
+            var movimentosResponse = JsonConvert.DeserializeObject<List<MovimentoResponse>>(movimentosJson);
+
+            return movimentosResponse.Select(x => (Movimento)x).ToList();
         }
     }
 }

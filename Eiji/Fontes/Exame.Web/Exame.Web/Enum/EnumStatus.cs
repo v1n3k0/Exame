@@ -1,4 +1,4 @@
-﻿namespace Exame.Dominio.Enum
+﻿namespace Exame.Web.Enum
 {
     public enum EnumStatus
     {

@@ -1,14 +1,7 @@
-﻿using System;
-
-namespace Exame.Dominio.Entities.Base
+﻿namespace Exame.Web.Models.Base
 {
     public abstract class EntityBase
     {
-        public Guid Codigo { get; set; }
-
-        protected EntityBase()
-        {
-            Codigo = Guid.NewGuid();
-        }
+        public string Message { get; set; }
     }
 }

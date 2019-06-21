@@ -1,6 +1,6 @@
-﻿using Exame.Dominio.Arguments.Base;
+﻿using Exame.Web.Arguments.Base;
 
-namespace Exame.Dominio.Arguments.Produto
+namespace Exame.Web.Arguments.Produto
 {
     public class AdicionarProdutoRequest : RequestBase
     {
