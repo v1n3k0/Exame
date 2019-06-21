@@ -5,7 +5,7 @@ using System;
 
 namespace Exame.Infra.Persistence.Repositories
 {
-    public class RepositoryCosif : RepositoryBase<Cosif, Guid>, IRepositoryCosif
+    public class RepositoryCosif : RepositoryBase<Cosif>, IRepositoryCosif
     {
         protected readonly ExameContext _context;
 

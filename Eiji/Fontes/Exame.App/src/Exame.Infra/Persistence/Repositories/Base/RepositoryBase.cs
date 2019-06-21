@@ -8,9 +8,8 @@ using System.Linq.Expressions;
 
 namespace Exame.Infra.Persistence.Repositories.Base
 {
-    public class RepositoryBase<TEntidade, TId> : IRepositoryBase<TEntidade, TId>
+    public class RepositoryBase<TEntidade> : IRepositoryBase<TEntidade>
       where TEntidade : EntityBase
-      where TId : struct
     {
 
         private readonly DbContext _context;
@@ -34,17 +33,7 @@ namespace Exame.Infra.Persistence.Repositories.Base
         {
             return Listar(includeProperties).FirstOrDefault(where);
         }
-
-        //public TEntidade ObterPorId(TId id, params Expression<Func<TEntidade, object>>[] includeProperties)
-        //{
-        //    if (includeProperties.Any())
-        //    {
-        //        return Listar(includeProperties).FirstOrDefault(x => x.Codigo.ToString() == id.ToString());
-        //    }
-
-        //    return _context.Set<TEntidade>().Find(id);
-        //}
-
+        
         public IQueryable<TEntidade> Listar(params Expression<Func<TEntidade, object>>[] includeProperties)
         {
             IQueryable<TEntidade> query = _context.Set<TEntidade>();

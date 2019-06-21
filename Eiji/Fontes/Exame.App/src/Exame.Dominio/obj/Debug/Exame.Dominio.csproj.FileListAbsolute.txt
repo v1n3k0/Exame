@@ -57,3 +57,4 @@ C:\Exame\Eiji\Fontes\Exame.App\src\Exame.Dominio\obj\Debug\Exame.Dominio.csproj.
 C:\Exame\Eiji\Fontes\Exame.App\src\Exame.Dominio\obj\Debug\Exame.Dominio.csproj.CopyComplete
 C:\Exame\Eiji\Fontes\Exame.App\src\Exame.Dominio\obj\Debug\Exame.Dominio.dll
 C:\Exame\Eiji\Fontes\Exame.App\src\Exame.Dominio\obj\Debug\Exame.Dominio.pdb
+C:\Exame\Eiji\Fontes\Exame.App\src\Exame.Dominio\obj\Debug\Exame.Dominio.csprojAssemblyReference.cache

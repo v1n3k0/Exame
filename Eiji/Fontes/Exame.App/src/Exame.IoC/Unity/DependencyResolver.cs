@@ -30,7 +30,7 @@ namespace XProjeto.IoC.Unity
             container.RegisterType<IServiceMovimento, ServiceMovimento>(new HierarchicalLifetimeManager());
 
             //Repository
-            container.RegisterType(typeof(IRepositoryBase<,>), typeof(RepositoryBase<,>));
+            container.RegisterType(typeof(IRepositoryBase<>), typeof(RepositoryBase<>));
 
             container.RegisterType<IRepositoryProduto, RepositoryProduto>(new HierarchicalLifetimeManager());
             container.RegisterType<IRepositoryCosif, RepositoryCosif>(new HierarchicalLifetimeManager());

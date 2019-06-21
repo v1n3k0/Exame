@@ -5,7 +5,7 @@ using System;
 
 namespace Exame.Infra.Persistence.Repositories
 {
-    public class RepositoryProduto : RepositoryBase<Produto, Guid>, IRepositoryProduto
+    public class RepositoryProduto : RepositoryBase<Produto>, IRepositoryProduto
     {
         protected readonly ExameContext _context;
 

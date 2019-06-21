@@ -6,7 +6,7 @@ using System.Linq;
 
 namespace Exame.Infra.Persistence.Repositories
 {
-    public class RepositoryMovimento : RepositoryBase<Movimento, Guid>, IRepositoryMovimento
+    public class RepositoryMovimento : RepositoryBase<Movimento>, IRepositoryMovimento
     {
         protected readonly ExameContext _context;
 
