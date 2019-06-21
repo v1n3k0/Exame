@@ -15,7 +15,6 @@ namespace Exame.Web.Arguments.Movimento
         public int Valor { get; set; }
         public Guid CodigoProduto { get; set; }
         public Guid CodigoCosif { get; set; }
-        public CosifResponse Cosif { get; set; }
 
         public static explicit operator MovimentoResponse(Models.Movimento entidade)
         {
@@ -29,8 +28,7 @@ namespace Exame.Web.Arguments.Movimento
                 Usuario = entidade.Usuario,
                 Valor = entidade.Valor,
                 CodigoProduto = entidade.CodigoProduto,
-                CodigoCosif = entidade.CodigoCosif,
-                Cosif = entidade.Cosif != null ? (CosifResponse)entidade.Cosif : null
+                CodigoCosif = entidade.CodigoCosif
             };
         }
     }

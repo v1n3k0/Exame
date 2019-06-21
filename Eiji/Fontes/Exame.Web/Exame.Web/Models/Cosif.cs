@@ -13,7 +13,6 @@ namespace Exame.Web.Models
         public EnumClassificacaoConta Classificacao { get; set; }
         public EnumStatus Status { get; set; }
         public Guid CodigoProduto { get; set; }
-        public Produto Produto { get; set; }
         public List<Movimento> Movimentos { get; set; }
 
         public static explicit operator Cosif(CosifResponse entidade)
@@ -30,7 +29,6 @@ namespace Exame.Web.Models
                 Classificacao = classificacao,
                 Status = status,
                 CodigoProduto = entidade.CodigoProduto,
-                Produto = entidade.Produto != null ? (Produto)entidade.Produto : null,
                 Movimentos = entidade.Movimentos?.Select(x => (Movimento)x).ToList() ?? null
             };
         }

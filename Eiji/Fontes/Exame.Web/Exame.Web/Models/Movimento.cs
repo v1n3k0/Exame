@@ -14,7 +14,6 @@ namespace Exame.Web.Models
         public string Usuario { get; set; }
         public int Valor { get; set; }
         public Guid CodigoCosif { get; set; }
-        public virtual Cosif Cosif { get; set; }
         public Guid CodigoProduto { get; set; }
 
         public static explicit operator Movimento(MovimentoResponse entidade)
@@ -29,7 +28,6 @@ namespace Exame.Web.Models
                 Usuario = entidade.Usuario,
                 Valor = entidade.Valor,
                 CodigoCosif = entidade.CodigoCosif,
-                Cosif = entidade.Cosif != null ? (Cosif)entidade.Cosif : null,
                 CodigoProduto = entidade.CodigoProduto
             };
         }

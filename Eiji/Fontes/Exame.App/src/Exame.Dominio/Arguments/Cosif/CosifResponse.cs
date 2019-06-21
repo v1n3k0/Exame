@@ -13,7 +13,6 @@ namespace Exame.Dominio.Arguments.Cosif
         public Guid CodigoProduto { get; set; }
         public string Classificacao { get; set; }
         public string Status { get; set; }
-        public ProdutoResponse Produto { get; set; }
         public List<MovimentoResponse> Movimentos { get; set; }
 
         public static explicit operator CosifResponse(Entities.Cosif entidade)
@@ -24,7 +23,6 @@ namespace Exame.Dominio.Arguments.Cosif
                 CodigoProduto = entidade.CodigoProduto,
                 Classificacao = entidade.Classificacao.ToString(),
                 Status = entidade.Status.ToString(),
-                Produto = entidade.Produto != null ? (ProdutoResponse)entidade.Produto : null,
                 Movimentos = entidade.Movimentos?.Select(x => (MovimentoResponse)x).ToList() ?? null
             };
         }
