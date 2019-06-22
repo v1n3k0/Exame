@@ -51,6 +51,9 @@ namespace Exame.Web.Controllers
         [HttpPost]
         public ActionResult Create(Movimento movimento)
         {
+            var apiMovimento = new ServiceMovimento();
+
+            apiMovimento.AdicionarMovimento(movimento);
 
             return RedirectToAction("Index");
         }

@@ -1,4 +1,5 @@
 ﻿using Exame.Web.Arguments.Base;
+using Exame.Web.Models;
 using System;
 
 namespace Exame.Web.Arguments.Movimento
@@ -11,5 +12,17 @@ namespace Exame.Web.Arguments.Movimento
         public Guid CodigoCosif { get; set; }
         public string Descricao { get; set; }
         public int Valor { get; set; }
+
+        public static explicit operator AdicionarMovimentoRequest(Models.Movimento entidade)
+        {
+            return new AdicionarMovimentoRequest() {
+                Mes = entidade.Mes,
+                Ano = entidade.Ano,
+                CodigoProduto = entidade.CodigoProduto,
+                CodigoCosif = entidade.CodigoCosif,
+                Descricao = entidade.Descricao,
+                Valor = entidade.Valor
+            };
+        }
     }
 }

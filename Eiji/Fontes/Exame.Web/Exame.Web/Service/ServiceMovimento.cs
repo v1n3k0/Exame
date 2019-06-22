@@ -25,5 +25,18 @@ namespace Exame.Web.Service
 
             return movimentosResponse.Select(x => (Movimento)x).ToList();
         }
+
+        public Movimento AdicionarMovimento(Movimento movimento)
+        {
+            string action = "Adicionar";
+            
+            HttpResponseMessage response = HttpInstance.GetHttpClientInstance().PostAsJsonAsync(string.Concat(BASEURL, action), (AdicionarMovimentoRequest)movimento).Result;
+
+            var movimentoJson = response.Content.ReadAsStringAsync().Result;
+
+            var movimentoResponse = JsonConvert.DeserializeObject<MovimentoResponse>(movimentoJson);
+
+            return (Movimento)movimentoResponse;
+        }
     }
 }
