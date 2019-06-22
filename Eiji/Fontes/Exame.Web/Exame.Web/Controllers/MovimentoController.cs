@@ -25,23 +25,14 @@ namespace Exame.Web.Controllers
         public ActionResult Create()
         {
             var apiProduto = new ServiceProduto();
-            var apiCosif = new ServiceCosif();
 
-            ViewBag.Produtos = new SelectList(
+             var produtos = new SelectList(
                 apiProduto.GetListar().OrderBy(x => x.Descricao),
                 "Codigo",
                 "Descricao"
                 );
-
-            ViewBag.Cosifs = new SelectList(
-                apiCosif.GetListar().Select(x => new
-                {
-                    Codigo = x.Codigo,
-                    Descricao = $"{x.Codigo} - ({x.Status})"
-                }),
-                "Codigo",
-                "Descricao"
-                );
+            
+            ViewBag.Produtos = produtos;
 
             var movimento = new Movimento();
 
