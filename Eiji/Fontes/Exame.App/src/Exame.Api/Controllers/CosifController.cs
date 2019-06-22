@@ -99,5 +99,21 @@ namespace Exame.Api.Controllers
                 return await ResponseExceptionAsync(ex);
             }
         }
+
+        [Route("ListarPorProduto")]
+        [HttpGet]
+        public async Task<HttpResponseMessage> ListarPorProduto(Guid codigoProduto)
+        {
+            try
+            {
+                var response = _serviceCosif.ListarPorProduto(codigoProduto);
+
+                return await ResponseAsync(response, _serviceCosif);
+            }
+            catch (Exception ex)
+            {
+                return await ResponseExceptionAsync(ex);
+            }
+        }
     }
 }

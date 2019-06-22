@@ -6,6 +6,7 @@ using Exame.Dominio.Interfaces.Services;
 using Exame.Dominio.Resources;
 using prmToolkit.NotificationPattern;
 using prmToolkit.NotificationPattern.Extensions;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -112,6 +113,11 @@ namespace Exame.Dominio.Services
         public IEnumerable<CosifResponse> Listar()
         {
             return _repositoryCosif.Listar().ToList().Select(x => (CosifResponse)x).ToList();
+        }
+
+        public IEnumerable<CosifResponse> ListarPorProduto(Guid codigoProduto)
+        {
+            return _repositoryCosif.ListarPor(x => x.CodigoProduto.Equals(codigoProduto)).ToList().Select(x => (CosifResponse)x).ToList();
         }
 
         public CosifResponse Obter(ObterCosifRequest request)

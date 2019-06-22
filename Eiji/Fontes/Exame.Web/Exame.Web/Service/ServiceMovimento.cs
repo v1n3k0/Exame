@@ -11,7 +11,7 @@ namespace Exame.Web.Service
     {
         private const string BASEURL = "https://localhost:44335/api/Movimento/";
 
-        public List<Movimento> GetListar()
+        public List<Movimento> Listar()
         {
             string action = "Listar";
 

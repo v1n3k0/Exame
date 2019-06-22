@@ -16,7 +16,7 @@ namespace Exame.Web.Controllers
 
             var api = new ServiceMovimento();
 
-            movimentos = api.GetListar();
+            movimentos = api.Listar();
 
             return View(movimentos);
         }
@@ -27,7 +27,7 @@ namespace Exame.Web.Controllers
             var apiProduto = new ServiceProduto();
 
              var produtos = new SelectList(
-                apiProduto.GetListar().OrderBy(x => x.Descricao),
+                apiProduto.Listar().OrderBy(x => x.Descricao),
                 "Codigo",
                 "Descricao"
                 );
@@ -55,7 +55,7 @@ namespace Exame.Web.Controllers
             var apiCosif = new ServiceCosif();
 
             var Cosifs = new SelectList(
-                apiCosif.GetListar().Where(x => x.CodigoProduto.Equals(codigoProduto)).Select(x => new
+                apiCosif.ListarPorProduto(codigoProduto).Select(x => new
                 {
                     Codigo = x.Codigo,
                     Descricao = $"{x.Codigo} - ({x.Status})"

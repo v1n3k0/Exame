@@ -9,7 +9,7 @@ namespace Exame.Web.Service
     {
         private const string BASEURL = "https://localhost:44335/api/Produto/";
 
-        public List<ProdutoResponse> GetListar()
+        public List<ProdutoResponse> Listar()
         {
             string action = "Listar";
 

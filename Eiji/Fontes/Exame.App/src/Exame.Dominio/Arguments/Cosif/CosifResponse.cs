@@ -1,6 +1,5 @@
 ﻿using Exame.Dominio.Arguments.Base;
 using Exame.Dominio.Arguments.Movimento;
-using Exame.Dominio.Arguments.Produto;
 using System;
 using System.Collections.Generic;
 using System.Linq;
