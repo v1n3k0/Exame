@@ -1,5 +1,6 @@
 ﻿using Exame.Web.Models;
 using Exame.Web.Service;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web.Mvc;
@@ -52,6 +53,24 @@ namespace Exame.Web.Controllers
         {
 
             return RedirectToAction("Index");
+        }
+
+        [HttpGet]
+        public JsonResult getCosifs(Guid codigoProduto)
+        {
+            var apiCosif = new ServiceCosif();
+
+            var Cosifs = new SelectList(
+                apiCosif.GetListar().Where(x => x.CodigoProduto.Equals(codigoProduto)).Select(x => new
+                {
+                    Codigo = x.Codigo,
+                    Descricao = $"{x.Codigo} - ({x.Status})"
+                }),
+                "Codigo",
+                "Descricao"
+                );
+
+            return Json(Cosifs, JsonRequestBehavior.AllowGet);
         }
     }
 }
