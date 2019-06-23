@@ -1,7 +1,10 @@
 ﻿using Exame.Dominio.Entities;
+using Exame.Dominio.Entities.Procedure;
 using Exame.Dominio.Interfaces.Repositories;
 using Exame.Infra.Persistence.Repositories.Base;
 using System;
+using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.Linq;
 
 namespace Exame.Infra.Persistence.Repositories
@@ -24,6 +27,13 @@ namespace Exame.Infra.Persistence.Repositories
         {
             return Listar().OrderByDescending(x => x.NumeroLancamento)
                 .FirstOrDefault(x => x.Mes == mes && x.Ano == ano)?.NumeroLancamento + 1 ?? 1;
+        }
+
+        public IEnumerable<MovimentoProduto> ListarMovimentoProduto()
+        {
+            SqlParameter parameter = new SqlParameter("@Listar", System.Data.SqlDbType.Text);
+            parameter.Value = 1;
+            return _context.Database.SqlQuery<MovimentoProduto>("exec ListarMovimentoProduto", parameter);
         }
     }
 }

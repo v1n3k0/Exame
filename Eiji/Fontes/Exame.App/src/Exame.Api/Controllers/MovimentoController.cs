@@ -99,5 +99,21 @@ namespace Exame.Api.Controllers
                 return await ResponseExceptionAsync(ex);
             }
         }
+
+        [Route("ListarMovimentoProduto")]
+        [HttpGet]
+        public async Task<HttpResponseMessage> ListarMovimentoProduto()
+        {
+            try
+            {
+                var response = _serviceMovimento.ListarMovimentoProduto();
+
+                return await ResponseAsync(response, _serviceMovimento);
+            }
+            catch (Exception ex)
+            {
+                return await ResponseExceptionAsync(ex);
+            }
+        }
     }
 }

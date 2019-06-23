@@ -104,6 +104,11 @@ namespace Exame.Dominio.Services
             return _repositoryMovimento.Listar().ToList().Select(x => (MovimentoResponse)x).ToList();
         }
 
+        public IEnumerable<MovimentoProdutoResponse> ListarMovimentoProduto()
+        {
+            return _repositoryMovimento.ListarMovimentoProduto().ToList().Select(x => (MovimentoProdutoResponse)x).ToList();
+        }
+
         public MovimentoResponse Obter(ObterMovimentoRequest request)
         {
             Movimento movimento = _repositoryMovimento.ObterPorId(request.Mes, request.Ano,

@@ -16,5 +16,7 @@ namespace Exame.Dominio.Interfaces.Services
         ResponseBase Remover(RemoverMovimentoRequest request);
 
         IEnumerable<MovimentoResponse> Listar();
+
+        IEnumerable<MovimentoProdutoResponse> ListarMovimentoProduto();
     }
 }

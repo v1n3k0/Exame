@@ -83,6 +83,7 @@
     <Compile Include="Arguments\Cosif\RemoverCosifRequest.cs" />
     <Compile Include="Arguments\Movimento\AdicionarMovimentoRequest.cs" />
     <Compile Include="Arguments\Movimento\EditarMovimentoRequest.cs" />
+    <Compile Include="Arguments\Movimento\MovimentoProdutoResponse.cs" />
     <Compile Include="Arguments\Movimento\MovimentoResponse.cs" />
     <Compile Include="Arguments\Movimento\ObterMovimentoRequest.cs" />
     <Compile Include="Arguments\Movimento\RemoverMovimentoRequest.cs" />
@@ -92,6 +93,7 @@
     <Compile Include="Entities\Base\EntityBase.cs" />
     <Compile Include="Entities\Cosif.cs" />
     <Compile Include="Entities\Movimento.cs" />
+    <Compile Include="Entities\Procedure\MovimentoProduto.cs" />
     <Compile Include="Entities\Produto.cs" />
     <Compile Include="Enum\EnumClassificacaoConta.cs" />
     <Compile Include="Enum\EnumStatus.cs" />

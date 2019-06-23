@@ -26,3 +26,17 @@ C:\Exame\Eiji\Fontes\Exame.App\test\Exame.DominioTeste\obj\Debug\netcoreapp2.1\E
 C:\Exame\Eiji\Fontes\Exame.App\test\Exame.DominioTeste\obj\Debug\netcoreapp2.1\Exame.DominioTeste.dll
 C:\Exame\Eiji\Fontes\Exame.App\test\Exame.DominioTeste\obj\Debug\netcoreapp2.1\Exame.DominioTeste.pdb
 C:\Exame\Eiji\Fontes\Exame.App\test\Exame.DominioTeste\obj\Debug\netcoreapp2.1\Exame.DominioTeste.csprojAssemblyReference.cache
+E:\GitHub\Eiji\Fontes\Exame.App\test\Exame.DominioTeste\bin\Debug\netcoreapp2.1\xunit.runner.visualstudio.dotnetcore.testadapter.dll
+E:\GitHub\Eiji\Fontes\Exame.App\test\Exame.DominioTeste\bin\Debug\netcoreapp2.1\xunit.runner.reporters.netcoreapp10.dll
+E:\GitHub\Eiji\Fontes\Exame.App\test\Exame.DominioTeste\bin\Debug\netcoreapp2.1\xunit.runner.utility.netcoreapp10.dll
+E:\GitHub\Eiji\Fontes\Exame.App\test\Exame.DominioTeste\bin\Debug\netcoreapp2.1\Exame.DominioTeste.deps.json
+E:\GitHub\Eiji\Fontes\Exame.App\test\Exame.DominioTeste\bin\Debug\netcoreapp2.1\Exame.DominioTeste.runtimeconfig.json
+E:\GitHub\Eiji\Fontes\Exame.App\test\Exame.DominioTeste\bin\Debug\netcoreapp2.1\Exame.DominioTeste.runtimeconfig.dev.json
+E:\GitHub\Eiji\Fontes\Exame.App\test\Exame.DominioTeste\bin\Debug\netcoreapp2.1\Exame.DominioTeste.dll
+E:\GitHub\Eiji\Fontes\Exame.App\test\Exame.DominioTeste\bin\Debug\netcoreapp2.1\Exame.DominioTeste.pdb
+E:\GitHub\Eiji\Fontes\Exame.App\test\Exame.DominioTeste\obj\Debug\netcoreapp2.1\Exame.DominioTeste.csprojAssemblyReference.cache
+E:\GitHub\Eiji\Fontes\Exame.App\test\Exame.DominioTeste\obj\Debug\netcoreapp2.1\Exame.DominioTeste.csproj.CoreCompileInputs.cache
+E:\GitHub\Eiji\Fontes\Exame.App\test\Exame.DominioTeste\obj\Debug\netcoreapp2.1\Exame.DominioTeste.AssemblyInfoInputs.cache
+E:\GitHub\Eiji\Fontes\Exame.App\test\Exame.DominioTeste\obj\Debug\netcoreapp2.1\Exame.DominioTeste.AssemblyInfo.cs
+E:\GitHub\Eiji\Fontes\Exame.App\test\Exame.DominioTeste\obj\Debug\netcoreapp2.1\Exame.DominioTeste.dll
+E:\GitHub\Eiji\Fontes\Exame.App\test\Exame.DominioTeste\obj\Debug\netcoreapp2.1\Exame.DominioTeste.pdb
