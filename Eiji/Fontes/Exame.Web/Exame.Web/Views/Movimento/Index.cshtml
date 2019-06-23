@@ -1,20 +1,17 @@
-﻿@model IEnumerable<Exame.Web.Models.Movimento>
+﻿@model IEnumerable<Exame.Web.Models.Procedure.MovimentoProduto>
 
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Lista de Movimento Produto";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Index</h2>
+<h2>Lista de Movimento Produto</h2>
 
 <p>
-    @Html.ActionLink("Create New", "Create")
+    @Html.ActionLink("Criar Novo Movimento", "Create", "Movimento", null, new { @class = "btn btn-primary" })
 </p>
 <table class="table">
     <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.Message)
-        </th>
         <th>
             @Html.DisplayNameFor(model => model.Mes)
         </th>
@@ -22,67 +19,47 @@
             @Html.DisplayNameFor(model => model.Ano)
         </th>
         <th>
+            @Html.DisplayNameFor(model => model.CodigoProduto)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DescricaoProduto)
+        </th>
+        <th>
             @Html.DisplayNameFor(model => model.NumeroLancamento)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.Descricao)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.DataMovimento)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Usuario)
+            @Html.DisplayNameFor(model => model.DescricaoMovimento)
         </th>
         <th>
             @Html.DisplayNameFor(model => model.Valor)
         </th>
-        <th>
-            @Html.DisplayNameFor(model => model.CodigoCosif)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.CodigoProduto)
-        </th>
-        <th></th>
     </tr>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.Message)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Mes)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Ano)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.NumeroLancamento)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Descricao)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.DataMovimento)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Usuario)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Valor)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.CodigoCosif)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.CodigoProduto)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
-            @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
-            @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
-        </td>
-    </tr>
-}
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Mes)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Ano)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CodigoProduto)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DescricaoProduto)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NumeroLancamento)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DescricaoMovimento)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Valor)
+            </td>
+        </tr>
+    }
 
 </table>

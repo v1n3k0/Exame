@@ -1,5 +1,6 @@
 ﻿using Exame.Web.Arguments.Movimento;
 using Exame.Web.Models;
+using Exame.Web.Models.Procedure;
 using Newtonsoft.Json;
 using System.Collections.Generic;
 using System.Linq;
@@ -24,6 +25,21 @@ namespace Exame.Web.Service
             var movimentosResponse = JsonConvert.DeserializeObject<List<MovimentoResponse>>(movimentosJson);
 
             return movimentosResponse.Select(x => (Movimento)x).ToList();
+        }
+
+        public List<MovimentoProduto> ListarMovimentoProduto()
+        {
+            string action = "ListarMovimentoProduto";
+
+            HttpRequestMessage request = new HttpRequestMessage(HttpMethod.Get, string.Concat(BASEURL, action));
+
+            HttpResponseMessage response = HttpInstance.GetHttpClientInstance().SendAsync(request).Result;
+
+            var movimentosJson = response.Content.ReadAsStringAsync().Result;
+
+            var movimentosResponse = JsonConvert.DeserializeObject<List<MovimentoProdutoResponse>>(movimentosJson);
+
+            return movimentosResponse.Select(x => (MovimentoProduto)x).ToList();
         }
 
         public Movimento AdicionarMovimento(Movimento movimento)

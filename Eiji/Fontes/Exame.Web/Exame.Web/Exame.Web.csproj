@@ -130,6 +130,7 @@
     <Compile Include="Arguments\Cosif\EditarCosifRequest.cs" />
     <Compile Include="Arguments\Movimento\AdicionarMovimentoRequest.cs" />
     <Compile Include="Arguments\Movimento\EditarMovimentoRequest.cs" />
+    <Compile Include="Arguments\Movimento\MovimentoProdutoResponse.cs" />
     <Compile Include="Arguments\Movimento\MovimentoResponse.cs" />
     <Compile Include="Arguments\Produto\AdicionarProdutoRequest.cs" />
     <Compile Include="Arguments\Produto\EditarProdutoRequest.cs" />
@@ -144,6 +145,7 @@
     <Compile Include="Models\Base\EntityBase.cs" />
     <Compile Include="Models\Cosif.cs" />
     <Compile Include="Models\Movimento.cs" />
+    <Compile Include="Models\Procedure\MovimentoProduto.cs" />
     <Compile Include="Models\Produto.cs" />
     <Compile Include="HttpClient\HttpInstance.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -187,8 +189,8 @@
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
-    <Content Include="Views\Movimento\Index.cshtml" />
     <Content Include="Views\Movimento\Create.cshtml" />
+    <Content Include="Views\Movimento\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

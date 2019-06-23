@@ -1,4 +1,5 @@
 ﻿using Exame.Web.Models;
+using Exame.Web.Models.Procedure;
 using Exame.Web.Service;
 using System;
 using System.Collections.Generic;
@@ -12,13 +13,13 @@ namespace Exame.Web.Controllers
         [HttpGet]
         public ActionResult Index()
         {
-            List<Movimento> movimentos = null;
+            List<MovimentoProduto> movimentosProduto = null;
 
             var api = new ServiceMovimento();
 
-            movimentos = api.Listar();
+            movimentosProduto = api.ListarMovimentoProduto();
 
-            return View(movimentos);
+            return View(movimentosProduto);
         }
 
         [HttpGet]
