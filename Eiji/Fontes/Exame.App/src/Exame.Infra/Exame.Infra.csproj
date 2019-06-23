@@ -130,6 +130,7 @@
       <DependentUpon>201906211453456_CorrecaoMovimentoCodigoProduto.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Migrations\Procedure.cs" />
     <Compile Include="Persistence\ExameContext.cs" />
     <Compile Include="Persistence\Map\Base\MapBase.cs" />
     <Compile Include="Persistence\Map\MapCosif.cs" />
